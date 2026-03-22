@@ -1,0 +1,35 @@
+{
+  "gender": {
+    "female": 3769,
+    "male": 2192,
+    "unknown": 22,
+    "androgynous": 17
+  },
+  "age_group": {
+    "young_adult": 3211,
+    "adult": 1184,
+    "middle_aged": 745,
+    "child": 337,
+    "teen": 298,
+    "senior": 218,
+    "unknown": 7
+  },
+  "skin_tone": {
+    "light": 3972,
+    "medium": 1722,
+    "dark": 219,
+    "unknown": 72,
+    "very_dark": 12,
+    "very_light": 3
+  },
+  "expression": {
+    "neutral": 3394,
+    "happy": 1885,
+    "other": 548,
+    "surprised": 98,
+    "sad": 36,
+    "unknown": 28,
+    "angry": 10,
+    "disgust": 1
+  }
+}

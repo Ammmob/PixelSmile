@@ -1,0 +1,802 @@
+[
+  {
+    "word": "stands",
+    "count": 4192
+  },
+  {
+    "word": "hand",
+    "count": 2299
+  },
+  {
+    "word": "eyes",
+    "count": 2169
+  },
+  {
+    "word": "facing",
+    "count": 2020
+  },
+  {
+    "word": "upright",
+    "count": 1879
+  },
+  {
+    "word": "looking",
+    "count": 1810
+  },
+  {
+    "word": "wide",
+    "count": 1658
+  },
+  {
+    "word": "open",
+    "count": 1594
+  },
+  {
+    "word": "mouth",
+    "count": 1500
+  },
+  {
+    "word": "head",
+    "count": 1433
+  },
+  {
+    "word": "hands",
+    "count": 1345
+  },
+  {
+    "word": "smiling",
+    "count": 1307
+  },
+  {
+    "word": "arms",
+    "count": 1293
+  },
+  {
+    "word": "holding",
+    "count": 1201
+  },
+  {
+    "word": "holds",
+    "count": 993
+  },
+  {
+    "word": "upward",
+    "count": 939
+  },
+  {
+    "word": "both",
+    "count": 891
+  },
+  {
+    "word": "still",
+    "count": 850
+  },
+  {
+    "word": "appearing",
+    "count": 842
+  },
+  {
+    "word": "raised",
+    "count": 827
+  },
+  {
+    "word": "other",
+    "count": 805
+  },
+  {
+    "word": "gazing",
+    "count": 777
+  },
+  {
+    "word": "toward",
+    "count": 741
+  },
+  {
+    "word": "tilted",
+    "count": 686
+  },
+  {
+    "word": "sits",
+    "count": 669
+  },
+  {
+    "word": "right",
+    "count": 625
+  },
+  {
+    "word": "viewer",
+    "count": 617
+  },
+  {
+    "word": "extended",
+    "count": 575
+  },
+  {
+    "word": "smile",
+    "count": 565
+  },
+  {
+    "word": "pose",
+    "count": 541
+  },
+  {
+    "word": "arm",
+    "count": 540
+  },
+  {
+    "word": "standing",
+    "count": 505
+  },
+  {
+    "word": "face",
+    "count": 502
+  },
+  {
+    "word": "beside",
+    "count": 502
+  },
+  {
+    "word": "downward",
+    "count": 491
+  },
+  {
+    "word": "side",
+    "count": 483
+  },
+  {
+    "word": "resting",
+    "count": 479
+  },
+  {
+    "word": "surrounded",
+    "count": 474
+  },
+  {
+    "word": "suggesting",
+    "count": 467
+  },
+  {
+    "word": "body",
+    "count": 460
+  },
+  {
+    "word": "leans",
+    "count": 444
+  },
+  {
+    "word": "behind",
+    "count": 439
+  },
+  {
+    "word": "chest",
+    "count": 439
+  },
+  {
+    "word": "focused",
+    "count": 433
+  },
+  {
+    "word": "glowing",
+    "count": 399
+  },
+  {
+    "word": "leaning",
+    "count": 386
+  },
+  {
+    "word": "something",
+    "count": 381
+  },
+  {
+    "word": "gripping",
+    "count": 377
+  },
+  {
+    "word": "figure",
+    "count": 371
+  },
+  {
+    "word": "startled",
+    "count": 353
+  },
+  {
+    "word": "motion",
+    "count": 352
+  },
+  {
+    "word": "closed",
+    "count": 345
+  },
+  {
+    "word": "hair",
+    "count": 336
+  },
+  {
+    "word": "back",
+    "count": 334
+  },
+  {
+    "word": "red",
+    "count": 333
+  },
+  {
+    "word": "another",
+    "count": 332
+  },
+  {
+    "word": "him",
+    "count": 328
+  },
+  {
+    "word": "shoulder",
+    "count": 317
+  },
+  {
+    "word": "sword",
+    "count": 316
+  },
+  {
+    "word": "confidently",
+    "count": 314
+  },
+  {
+    "word": "legs",
+    "count": 314
+  },
+  {
+    "word": "gesture",
+    "count": 313
+  },
+  {
+    "word": "seated",
+    "count": 307
+  },
+  {
+    "word": "crossed",
+    "count": 299
+  },
+  {
+    "word": "ahead",
+    "count": 295
+  },
+  {
+    "word": "dynamic",
+    "count": 294
+  },
+  {
+    "word": "left",
+    "count": 292
+  },
+  {
+    "word": "cheerful",
+    "count": 290
+  },
+  {
+    "word": "front",
+    "count": 289
+  },
+  {
+    "word": "turned",
+    "count": 288
+  },
+  {
+    "word": "object",
+    "count": 276
+  },
+  {
+    "word": "showing",
+    "count": 270
+  },
+  {
+    "word": "intense",
+    "count": 262
+  },
+  {
+    "word": "long",
+    "count": 258
+  },
+  {
+    "word": "blue",
+    "count": 255
+  },
+  {
+    "word": "extends",
+    "count": 248
+  },
+  {
+    "word": "hip",
+    "count": 240
+  },
+  {
+    "word": "white",
+    "count": 239
+  },
+  {
+    "word": "stance",
+    "count": 238
+  },
+  {
+    "word": "wooden",
+    "count": 236
+  },
+  {
+    "word": "bent",
+    "count": 232
+  },
+  {
+    "word": "outward",
+    "count": 231
+  },
+  {
+    "word": "flowing",
+    "count": 227
+  },
+  {
+    "word": "spread",
+    "count": 226
+  },
+  {
+    "word": "profile",
+    "count": 225
+  },
+  {
+    "word": "outstretched",
+    "count": 222
+  },
+  {
+    "word": "raises",
+    "count": 221
+  },
+  {
+    "word": "clenched",
+    "count": 218
+  },
+  {
+    "word": "lips",
+    "count": 217
+  },
+  {
+    "word": "clasped",
+    "count": 214
+  },
+  {
+    "word": "energy",
+    "count": 213
+  },
+  {
+    "word": "mid-air",
+    "count": 212
+  },
+  {
+    "word": "fingers",
+    "count": 208
+  },
+  {
+    "word": "green",
+    "count": 206
+  },
+  {
+    "word": "together",
+    "count": 204
+  },
+  {
+    "word": "sideways",
+    "count": 202
+  },
+  {
+    "word": "floating",
+    "count": 195
+  },
+  {
+    "word": "stern",
+    "count": 194
+  },
+  {
+    "word": "two",
+    "count": 193
+  },
+  {
+    "word": "chin",
+    "count": 192
+  },
+  {
+    "word": "movement",
+    "count": 187
+  },
+  {
+    "word": "stares",
+    "count": 187
+  },
+  {
+    "word": "reacting",
+    "count": 185
+  },
+  {
+    "word": "creature",
+    "count": 185
+  },
+  {
+    "word": "widely",
+    "count": 185
+  },
+  {
+    "word": "black",
+    "count": 177
+  },
+  {
+    "word": "above",
+    "count": 176
+  },
+  {
+    "word": "intensely",
+    "count": 176
+  },
+  {
+    "word": "teeth",
+    "count": 175
+  },
+  {
+    "word": "fists",
+    "count": 172
+  },
+  {
+    "word": "sides",
+    "count": 172
+  },
+  {
+    "word": "close",
+    "count": 171
+  },
+  {
+    "word": "away",
+    "count": 167
+  },
+  {
+    "word": "across",
+    "count": 167
+  },
+  {
+    "word": "looks",
+    "count": 165
+  },
+  {
+    "word": "smiles",
+    "count": 165
+  },
+  {
+    "word": "swirling",
+    "count": 164
+  },
+  {
+    "word": "poised",
+    "count": 163
+  },
+  {
+    "word": "surface",
+    "count": 161
+  },
+  {
+    "word": "water",
+    "count": 159
+  },
+  {
+    "word": "leg",
+    "count": 159
+  },
+  {
+    "word": "angled",
+    "count": 159
+  },
+  {
+    "word": "parted",
+    "count": 158
+  },
+  {
+    "word": "furrowed",
+    "count": 157
+  },
+  {
+    "word": "down",
+    "count": 156
+  },
+  {
+    "word": "aggressively",
+    "count": 155
+  },
+  {
+    "word": "ready",
+    "count": 153
+  },
+  {
+    "word": "partially",
+    "count": 150
+  },
+  {
+    "word": "staff",
+    "count": 149
+  },
+  {
+    "word": "ground",
+    "count": 148
+  },
+  {
+    "word": "slight",
+    "count": 147
+  },
+  {
+    "word": "dog",
+    "count": 146
+  },
+  {
+    "word": "characters",
+    "count": 137
+  },
+  {
+    "word": "rests",
+    "count": 135
+  },
+  {
+    "word": "weapon",
+    "count": 135
+  },
+  {
+    "word": "child",
+    "count": 134
+  },
+  {
+    "word": "narrowed",
+    "count": 134
+  },
+  {
+    "word": "shown",
+    "count": 130
+  },
+  {
+    "word": "finger",
+    "count": 130
+  },
+  {
+    "word": "table",
+    "count": 130
+  },
+  {
+    "word": "sitting",
+    "count": 129
+  },
+  {
+    "word": "out",
+    "count": 129
+  },
+  {
+    "word": "confident",
+    "count": 128
+  },
+  {
+    "word": "shouting",
+    "count": 128
+  },
+  {
+    "word": "displaying",
+    "count": 127
+  },
+  {
+    "word": "speaking",
+    "count": 126
+  },
+  {
+    "word": "firmly",
+    "count": 124
+  },
+  {
+    "word": "faces",
+    "count": 123
+  },
+  {
+    "word": "dramatically",
+    "count": 121
+  },
+  {
+    "word": "tightly",
+    "count": 121
+  },
+  {
+    "word": "nearby",
+    "count": 120
+  },
+  {
+    "word": "strikes",
+    "count": 118
+  },
+  {
+    "word": "crouches",
+    "count": 117
+  },
+  {
+    "word": "through",
+    "count": 117
+  },
+  {
+    "word": "surprise",
+    "count": 116
+  },
+  {
+    "word": "raising",
+    "count": 116
+  },
+  {
+    "word": "cat",
+    "count": 116
+  },
+  {
+    "word": "sky",
+    "count": 115
+  },
+  {
+    "word": "joyfully",
+    "count": 114
+  },
+  {
+    "word": "calmly",
+    "count": 113
+  },
+  {
+    "word": "dynamically",
+    "count": 112
+  },
+  {
+    "word": "golden",
+    "count": 112
+  },
+  {
+    "word": "gesturing",
+    "count": 111
+  },
+  {
+    "word": "someone",
+    "count": 110
+  },
+  {
+    "word": "conveying",
+    "count": 110
+  },
+  {
+    "word": "action",
+    "count": 108
+  },
+  {
+    "word": "confrontation",
+    "count": 108
+  },
+  {
+    "word": "yellow",
+    "count": 107
+  },
+  {
+    "word": "facial",
+    "count": 107
+  },
+  {
+    "word": "lies",
+    "count": 107
+  },
+  {
+    "word": "grips",
+    "count": 106
+  },
+  {
+    "word": "fist",
+    "count": 105
+  },
+  {
+    "word": "focus",
+    "count": 105
+  },
+  {
+    "word": "intently",
+    "count": 104
+  },
+  {
+    "word": "directed",
+    "count": 103
+  },
+  {
+    "word": "high",
+    "count": 103
+  },
+  {
+    "word": "joyful",
+    "count": 102
+  },
+  {
+    "word": "pointing",
+    "count": 101
+  },
+  {
+    "word": "tense",
+    "count": 100
+  },
+  {
+    "word": "into",
+    "count": 97
+  },
+  {
+    "word": "apart",
+    "count": 95
+  },
+  {
+    "word": "smaller",
+    "count": 95
+  },
+  {
+    "word": "shock",
+    "count": 94
+  },
+  {
+    "word": "mid-motion",
+    "count": 94
+  },
+  {
+    "word": "atop",
+    "count": 94
+  },
+  {
+    "word": "floats",
+    "count": 94
+  },
+  {
+    "word": "reaching",
+    "count": 94
+  },
+  {
+    "word": "low",
+    "count": 94
+  },
+  {
+    "word": "palm",
+    "count": 93
+  },
+  {
+    "word": "readiness",
+    "count": 93
+  },
+  {
+    "word": "sudden",
+    "count": 93
+  },
+  {
+    "word": "curled",
+    "count": 92
+  },
+  {
+    "word": "fish",
+    "count": 92
+  },
+  {
+    "word": "index",
+    "count": 91
+  },
+  {
+    "word": "lying",
+    "count": 91
+  },
+  {
+    "word": "figures",
+    "count": 90
+  },
+  {
+    "word": "cross-legged",
+    "count": 90
+  },
+  {
+    "word": "poses",
+    "count": 90
+  },
+  {
+    "word": "static",
+    "count": 90
+  },
+  {
+    "word": "eye",
+    "count": 89
+  }
+]

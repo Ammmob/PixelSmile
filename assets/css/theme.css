@@ -1,0 +1,20 @@
+:root {
+  --bg: #e3e8ee;
+  --bg-wash: #eff3f7;
+  --panel: rgba(238, 243, 248, 0.64);
+  --panel-strong: rgba(231, 237, 244, 0.82);
+  --text: #1f2731;
+  --muted: #677487;
+  --line: rgba(126, 129, 139, 0.22);
+
+  --brand: #bb8d96;
+  --brand-strong: #936a72;
+  --brand-soft: rgba(206, 173, 180, 0.50);
+
+  --accent: #3f8092;
+  --accent-strong: #2f6777;
+  --accent-soft: rgba(162, 196, 208, 0.54);
+  --accent-pale: rgba(244, 250, 251, 0.68);
+
+  --shadow: 0 24px 52px rgba(88, 97, 112, 0.14);
+}

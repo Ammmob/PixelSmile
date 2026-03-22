@@ -1,0 +1,802 @@
+[
+  {
+    "word": "wears",
+    "count": 5558
+  },
+  {
+    "word": "white",
+    "count": 2425
+  },
+  {
+    "word": "shirt",
+    "count": 1982
+  },
+  {
+    "word": "hair",
+    "count": 1944
+  },
+  {
+    "word": "black",
+    "count": 1831
+  },
+  {
+    "word": "top",
+    "count": 1699
+  },
+  {
+    "word": "blue",
+    "count": 1294
+  },
+  {
+    "word": "red",
+    "count": 995
+  },
+  {
+    "word": "accessories",
+    "count": 662
+  },
+  {
+    "word": "earrings",
+    "count": 657
+  },
+  {
+    "word": "long",
+    "count": 651
+  },
+  {
+    "word": "jacket",
+    "count": 648
+  },
+  {
+    "word": "necklace",
+    "count": 595
+  },
+  {
+    "word": "brown",
+    "count": 560
+  },
+  {
+    "word": "dress",
+    "count": 540
+  },
+  {
+    "word": "gray",
+    "count": 539
+  },
+  {
+    "word": "sleeveless",
+    "count": 470
+  },
+  {
+    "word": "t-shirt",
+    "count": 463
+  },
+  {
+    "word": "collared",
+    "count": 460
+  },
+  {
+    "word": "patterned",
+    "count": 424
+  },
+  {
+    "word": "glasses",
+    "count": 406
+  },
+  {
+    "word": "pink",
+    "count": 381
+  },
+  {
+    "word": "tie",
+    "count": 378
+  },
+  {
+    "word": "green",
+    "count": 370
+  },
+  {
+    "word": "short",
+    "count": 357
+  },
+  {
+    "word": "button-up",
+    "count": 357
+  },
+  {
+    "word": "collar",
+    "count": 356
+  },
+  {
+    "word": "thin",
+    "count": 346
+  },
+  {
+    "word": "yellow",
+    "count": 320
+  },
+  {
+    "word": "gold",
+    "count": 313
+  },
+  {
+    "word": "striped",
+    "count": 310
+  },
+  {
+    "word": "suit",
+    "count": 299
+  },
+  {
+    "word": "floral",
+    "count": 280
+  },
+  {
+    "word": "sleeves",
+    "count": 278
+  },
+  {
+    "word": "blazer",
+    "count": 268
+  },
+  {
+    "word": "sweater",
+    "count": 257
+  },
+  {
+    "word": "jewelry",
+    "count": 236
+  },
+  {
+    "word": "patterns",
+    "count": 233
+  },
+  {
+    "word": "lace",
+    "count": 233
+  },
+  {
+    "word": "straps",
+    "count": 227
+  },
+  {
+    "word": "silver",
+    "count": 225
+  },
+  {
+    "word": "trim",
+    "count": 216
+  },
+  {
+    "word": "short-sleeved",
+    "count": 213
+  },
+  {
+    "word": "long-sleeve",
+    "count": 209
+  },
+  {
+    "word": "dangling",
+    "count": 209
+  },
+  {
+    "word": "purple",
+    "count": 206
+  },
+  {
+    "word": "pants",
+    "count": 198
+  },
+  {
+    "word": "wavy",
+    "count": 184
+  },
+  {
+    "word": "neckline",
+    "count": 182
+  },
+  {
+    "word": "clothing",
+    "count": 179
+  },
+  {
+    "word": "buttons",
+    "count": 171
+  },
+  {
+    "word": "sunglasses",
+    "count": 170
+  },
+  {
+    "word": "hat",
+    "count": 169
+  },
+  {
+    "word": "plaid",
+    "count": 165
+  },
+  {
+    "word": "scarf",
+    "count": 163
+  },
+  {
+    "word": "pendant",
+    "count": 162
+  },
+  {
+    "word": "long-sleeved",
+    "count": 159
+  },
+  {
+    "word": "colorful",
+    "count": 158
+  },
+  {
+    "word": "blonde",
+    "count": 153
+  },
+  {
+    "word": "logo",
+    "count": 152
+  },
+  {
+    "word": "coat",
+    "count": 151
+  },
+  {
+    "word": "sheer",
+    "count": 149
+  },
+  {
+    "word": "orange",
+    "count": 147
+  },
+  {
+    "word": "hoop",
+    "count": 145
+  },
+  {
+    "word": "shoulder-length",
+    "count": 142
+  },
+  {
+    "word": "graphic",
+    "count": 141
+  },
+  {
+    "word": "strap",
+    "count": 141
+  },
+  {
+    "word": "skirt",
+    "count": 141
+  },
+  {
+    "word": "black-framed",
+    "count": 139
+  },
+  {
+    "word": "wrist",
+    "count": 138
+  },
+  {
+    "word": "left",
+    "count": 134
+  },
+  {
+    "word": "blouse",
+    "count": 134
+  },
+  {
+    "word": "microphone",
+    "count": 133
+  },
+  {
+    "word": "back",
+    "count": 133
+  },
+  {
+    "word": "neatly",
+    "count": 132
+  },
+  {
+    "word": "garment",
+    "count": 128
+  },
+  {
+    "word": "text",
+    "count": 128
+  },
+  {
+    "word": "ruffled",
+    "count": 126
+  },
+  {
+    "word": "lipstick",
+    "count": 125
+  },
+  {
+    "word": "curly",
+    "count": 122
+  },
+  {
+    "word": "cardigan",
+    "count": 120
+  },
+  {
+    "word": "v-neck",
+    "count": 117
+  },
+  {
+    "word": "bow",
+    "count": 117
+  },
+  {
+    "word": "front",
+    "count": 114
+  },
+  {
+    "word": "checkered",
+    "count": 112
+  },
+  {
+    "word": "ear",
+    "count": 111
+  },
+  {
+    "word": "pearl",
+    "count": 109
+  },
+  {
+    "word": "hoodie",
+    "count": 108
+  },
+  {
+    "word": "beige",
+    "count": 108
+  },
+  {
+    "word": "matching",
+    "count": 105
+  },
+  {
+    "word": "head",
+    "count": 105
+  },
+  {
+    "word": "jeans",
+    "count": 104
+  },
+  {
+    "word": "beard",
+    "count": 103
+  },
+  {
+    "word": "crew-neck",
+    "count": 103
+  },
+  {
+    "word": "standing",
+    "count": 103
+  },
+  {
+    "word": "denim",
+    "count": 102
+  },
+  {
+    "word": "zip-up",
+    "count": 101
+  },
+  {
+    "word": "loose",
+    "count": 99
+  },
+  {
+    "word": "eyeglasses",
+    "count": 98
+  },
+  {
+    "word": "cap",
+    "count": 97
+  },
+  {
+    "word": "vest",
+    "count": 97
+  },
+  {
+    "word": "pulled",
+    "count": 97
+  },
+  {
+    "word": "layered",
+    "count": 97
+  },
+  {
+    "word": "flowers",
+    "count": 97
+  },
+  {
+    "word": "beaded",
+    "count": 96
+  },
+  {
+    "word": "turtleneck",
+    "count": 95
+  },
+  {
+    "word": "strapless",
+    "count": 95
+  },
+  {
+    "word": "ring",
+    "count": 93
+  },
+  {
+    "word": "carries",
+    "count": 92
+  },
+  {
+    "word": "bracelet",
+    "count": 91
+  },
+  {
+    "word": "facial",
+    "count": 90
+  },
+  {
+    "word": "partially",
+    "count": 90
+  },
+  {
+    "word": "thin-framed",
+    "count": 90
+  },
+  {
+    "word": "lettering",
+    "count": 89
+  },
+  {
+    "word": "hand",
+    "count": 88
+  },
+  {
+    "word": "stripes",
+    "count": 87
+  },
+  {
+    "word": "hooded",
+    "count": 86
+  },
+  {
+    "word": "across",
+    "count": 86
+  },
+  {
+    "word": "fabric",
+    "count": 85
+  },
+  {
+    "word": "knitted",
+    "count": 85
+  },
+  {
+    "word": "details",
+    "count": 83
+  },
+  {
+    "word": "straight",
+    "count": 82
+  },
+  {
+    "word": "ears",
+    "count": 81
+  },
+  {
+    "word": "against",
+    "count": 80
+  },
+  {
+    "word": "polo",
+    "count": 79
+  },
+  {
+    "word": "featuring",
+    "count": 78
+  },
+  {
+    "word": "decorative",
+    "count": 78
+  },
+  {
+    "word": "tied",
+    "count": 78
+  },
+  {
+    "word": "headband",
+    "count": 77
+  },
+  {
+    "word": "navy",
+    "count": 76
+  },
+  {
+    "word": "lapel",
+    "count": 75
+  },
+  {
+    "word": "button-down",
+    "count": 74
+  },
+  {
+    "word": "ribbed",
+    "count": 74
+  },
+  {
+    "word": "chain",
+    "count": 72
+  },
+  {
+    "word": "undershirt",
+    "count": 71
+  },
+  {
+    "word": "draped",
+    "count": 71
+  },
+  {
+    "word": "seated",
+    "count": 69
+  },
+  {
+    "word": "subtle",
+    "count": 69
+  },
+  {
+    "word": "girl",
+    "count": 69
+  },
+  {
+    "word": "shirtless",
+    "count": 68
+  },
+  {
+    "word": "earring",
+    "count": 68
+  },
+  {
+    "word": "hands",
+    "count": 67
+  },
+  {
+    "word": "lanyard",
+    "count": 66
+  },
+  {
+    "word": "knit",
+    "count": 66
+  },
+  {
+    "word": "makeup",
+    "count": 65
+  },
+  {
+    "word": "pocket",
+    "count": 64
+  },
+  {
+    "word": "embroidery",
+    "count": 63
+  },
+  {
+    "word": "flowing",
+    "count": 63
+  },
+  {
+    "word": "belt",
+    "count": 62
+  },
+  {
+    "word": "necklaces",
+    "count": 62
+  },
+  {
+    "word": "loosely",
+    "count": 62
+  },
+  {
+    "word": "shorts",
+    "count": 61
+  },
+  {
+    "word": "maroon",
+    "count": 61
+  },
+  {
+    "word": "off-shoulder",
+    "count": 61
+  },
+  {
+    "word": "sitting",
+    "count": 60
+  },
+  {
+    "word": "paired",
+    "count": 60
+  },
+  {
+    "word": "puffed",
+    "count": 60
+  },
+  {
+    "word": "delicate",
+    "count": 60
+  },
+  {
+    "word": "flower",
+    "count": 60
+  },
+  {
+    "word": "high",
+    "count": 59
+  },
+  {
+    "word": "circular",
+    "count": 59
+  },
+  {
+    "word": "covering",
+    "count": 59
+  },
+  {
+    "word": "tank",
+    "count": 58
+  },
+  {
+    "word": "bangs",
+    "count": 58
+  },
+  {
+    "word": "accessory",
+    "count": 57
+  },
+  {
+    "word": "body",
+    "count": 56
+  },
+  {
+    "word": "trimmed",
+    "count": 55
+  },
+  {
+    "word": "both",
+    "count": 55
+  },
+  {
+    "word": "teal",
+    "count": 55
+  },
+  {
+    "word": "floral-patterned",
+    "count": 55
+  },
+  {
+    "word": "short-sleeve",
+    "count": 54
+  },
+  {
+    "word": "choker",
+    "count": 54
+  },
+  {
+    "word": "bag",
+    "count": 53
+  },
+  {
+    "word": "wristwatch",
+    "count": 53
+  },
+  {
+    "word": "leather",
+    "count": 52
+  },
+  {
+    "word": "pinned",
+    "count": 52
+  },
+  {
+    "word": "arm",
+    "count": 52
+  },
+  {
+    "word": "nose",
+    "count": 52
+  },
+  {
+    "word": "design",
+    "count": 51
+  },
+  {
+    "word": "metallic",
+    "count": 51
+  },
+  {
+    "word": "backpack",
+    "count": 51
+  },
+  {
+    "word": "camera",
+    "count": 51
+  },
+  {
+    "word": "dots",
+    "count": 50
+  },
+  {
+    "word": "black-and-white",
+    "count": 50
+  },
+  {
+    "word": "plus",
+    "count": 50
+  },
+  {
+    "word": "tattoos",
+    "count": 49
+  },
+  {
+    "word": "polish",
+    "count": 49
+  },
+  {
+    "word": "outdoors",
+    "count": 48
+  },
+  {
+    "word": "robe",
+    "count": 48
+  },
+  {
+    "word": "nail",
+    "count": 48
+  },
+  {
+    "word": "lighting",
+    "count": 47
+  },
+  {
+    "word": "round",
+    "count": 46
+  },
+  {
+    "word": "gown",
+    "count": 46
+  },
+  {
+    "word": "trousers",
+    "count": 45
+  },
+  {
+    "word": "name",
+    "count": 45
+  },
+  {
+    "word": "veil",
+    "count": 45
+  },
+  {
+    "word": "area",
+    "count": 44
+  },
+  {
+    "word": "wrapped",
+    "count": 44
+  },
+  {
+    "word": "upper",
+    "count": 43
+  },
+  {
+    "word": "shiny",
+    "count": 43
+  }
+]

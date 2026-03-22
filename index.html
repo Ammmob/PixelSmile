@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixelSmile: Toward Fine-Grained Facial Expression Editing</title>
+  <link rel="stylesheet" href="./assets/css/base.css" />
+  <link rel="stylesheet" href="./assets/css/theme.css" />
+  <link rel="stylesheet" href="./assets/css/modules.css" />
+</head>
+
+<body>
+  <div class="bg-grid"></div>
+  <div class="aurora aurora--gold"></div>
+  <div class="aurora aurora--cyan"></div>
+  <div class="aurora aurora--blue"></div>
+  <div class="light-band light-band--one"></div>
+  <div class="light-band light-band--two"></div>
+  <aside class="side-nav" aria-label="Section navigation">
+    <div class="side-nav__menu">
+      <div class="side-nav__items">
+        <a class="side-nav__link" href="#editing-section">
+          <svg class="side-nav__link-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="6" y1="5" x2="6" y2="19"></line>
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="18" y1="5" x2="18" y2="19"></line>
+            <circle cx="6" cy="9" r="2.2"></circle>
+            <circle cx="12" cy="15" r="2.2"></circle>
+            <circle cx="18" cy="11" r="2.2"></circle>
+          </svg>
+          <span>Editing</span>
+        </a>
+        <a class="side-nav__link" href="#blending-section">
+          <svg class="side-nav__link-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="9" cy="12" r="5.2"></circle>
+            <circle cx="15" cy="12" r="5.2"></circle>
+          </svg>
+          <span>Blending</span>
+        </a>
+        <a class="side-nav__link" href="#benchmark-section">
+          <svg class="side-nav__link-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="4" y1="19" x2="20" y2="19"></line>
+            <rect x="6" y="11" width="3" height="8" rx="1"></rect>
+            <rect x="11" y="8" width="3" height="11" rx="1"></rect>
+            <rect x="16" y="5" width="3" height="14" rx="1"></rect>
+          </svg>
+          <span>Bench</span>
+        </a>
+        <a class="side-nav__link" href="#dataset-section">
+          <svg class="side-nav__link-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="4.5" y="5" width="6" height="6" rx="1.2"></rect>
+            <rect x="13.5" y="5" width="6" height="6" rx="1.2"></rect>
+            <rect x="4.5" y="14" width="6" height="6" rx="1.2"></rect>
+            <rect x="13.5" y="14" width="6" height="6" rx="1.2"></rect>
+          </svg>
+          <span>Dataset</span>
+        </a>
+      </div>
+      <button class="side-nav__button side-nav__button--menu" type="button" aria-label="Open section navigation">
+        <svg class="side-nav__icon" viewBox="0 0 24 24" aria-hidden="true">
+          <line x1="5.5" y1="7" x2="18.5" y2="7"></line>
+          <line x1="5.5" y1="12" x2="18.5" y2="12"></line>
+          <line x1="5.5" y1="17" x2="18.5" y2="17"></line>
+        </svg>
+      </button>
+    </div>
+    <a class="side-nav__button side-nav__button--top" href="#top" aria-label="Back to top">
+      <svg class="side-nav__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <polyline points="5.5,14.5 12,8 18.5,14.5"></polyline>
+      </svg>
+    </a>
+  </aside>
+
+  <header class="hero hero--paper" id="top">
+    <h1 class="brand-line">
+      <img src="./assets/img/logos/PixelSmile.png" alt="PixelSmile" class="brand-line__logo" />
+      <span>PixelSmile</span>
+    </h1>
+    <h2 class="paper-title">Toward Fine-Grained Facial Expression Editing</h2>
+    <p class="subtitle subtitle--center">Continuous, linearly controllable, and identity-preserving facial expression
+      editing.</p>
+    <div class="authors">
+      <a class="author-chip" href="https://openreview.net/profile?id=%7EJiabin_Hua1" target="_blank"
+        rel="noreferrer">Jiabin Hua<sup>1,2,*</sup></a>
+      <a class="author-chip" href="https://doby-xu.github.io/" target="_blank" rel="noreferrer">Hengyuan
+        Xu<sup>1,2,*</sup></a>
+      <a class="author-chip" href="https://openreview.net/profile?id=~Aojie_Li1" target="_blank" rel="noreferrer">Aojie
+        Li<sup>2,&dagger;</sup></a>
+      <a class="author-chip" href="https://wchengad.github.io/" target="_blank" rel="noreferrer">Wei
+        Cheng<sup>2</sup></a>
+      <a class="author-chip" href="https://www.skicyyu.org/" target="_blank" rel="noreferrer">Gang
+        Yu<sup>2,&Dagger;</sup></a>
+      <a class="author-chip" href="https://xingjunm.github.io/" target="_blank" rel="noreferrer">Xingjun
+        Ma<sup>1,&Dagger;</sup></a>
+      <a class="author-chip" href="https://openreview.net/profile?id=~Yu-Gang_Jiang1" target="_blank"
+        rel="noreferrer">Yu-Gang Jiang<sup>1</sup></a>
+    </div>
+    <div class="meta-row">
+      <span><sup>1</sup>Fudan University</span>
+      <span><sup>2</sup>StepFun</span>
+    </div>
+    <div class="meta-row">
+      <span><sup>*</sup>Equal contribution</span>
+      <span><sup>&dagger;</sup>Project lead</span>
+      <span><sup>&Dagger;</sup>Corresponding authors</span>
+    </div>
+    <div class="hero-links" aria-label="Project resources">
+      <a class="hero-links__link" href="#" aria-disabled="true">
+        <img src="./assets/img/logos/arxiv.svg" alt="arXiv"
+          class="hero-links__brand">
+        <span>arXiv</span>
+      </a>
+      <a class="hero-links__link" href="https://github.com/Ammmob/PixelSmile" target="_blank" rel="noreferrer">
+        <img src="./assets/img/logos/github.svg" alt="GitHub"
+          class="hero-links__brand hero-links__brand--dark">
+        <span>Code</span>
+      </a>
+      <a class="hero-links__link" href="#" aria-disabled="true">
+        <img src="./assets/img/logos/huggingface.svg" alt="HuggingFace"
+          class="hero-links__brand">
+        <span>Model</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel" id="editing-section">
+      <div class="section-head">
+        <h2>Expression Editing</h2>
+        <p>PixelSmile enables fine-grained editing over 12 facial expressions with continuous and approximately linear
+          intensity control, while preserving identity consistency across diverse portrait inputs.</p>
+      </div>
+      <div id="slider-root"></div>
+    </section>
+
+    <section class="panel" id="blending-section">
+      <div class="section-head">
+        <h2>Expression Blending</h2>
+        <p>Beyond single-expression editing, PixelSmile supports zero-shot pairwise blending, revealing a continuous and
+          compositional expression manifold that can synthesize plausible compound expressions.</p>
+      </div>
+      <div id="blending-root"></div>
+    </section>
+
+    <section class="panel" id="benchmark-section">
+      <div class="section-head">
+        <h2>FFE-Bench</h2>
+        <p>FFE-Bench evaluates facial expression editing from four complementary aspects, including structural
+          confusion, editing accuracy, linear controllability, and the trade-off between expression transfer and
+          identity preservation.</p>
+      </div>
+      <div id="benchmark-root"></div>
+    </section>
+
+    <section class="panel" id="dataset-section">
+      <div class="section-head">
+        <h2>FFE Dataset</h2>
+        <p>Flex Facial Expression (FFE) is a 60K-image cross-domain dataset with same-identity expression variations and
+          continuous affective annotations, covering both real-world and anime portraits for fine-grained controllable
+          editing.</p>
+      </div>
+      <div id="dataset-root"></div>
+    </section>
+
+    <section class="panel citation-panel" id="citation-section">
+      <div class="section-head">
+        <h2>Citation</h2>
+        <p>The final BibTeX entry will be released together with the paper.</p>
+      </div>
+      <pre class="citation-block"><code>@article{pixelsmile2026,
+  title   = {PixelSmile: Toward Fine-Grained Facial Expression Editing},
+  author  = {Jiabin Hua and Hengyuan Xu and Aojie Li and Wei Cheng and Gang Yu and Xingjun Ma and Yu-Gang Jiang},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2026}
+}</code></pre>
+    </section>
+  </main>
+
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+
+</html>

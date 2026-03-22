@@ -1,0 +1,39 @@
+{
+  "gender": {
+    "male": 4978,
+    "female": 4179,
+    "unknown": 1988,
+    "androgynous": 43
+  },
+  "age_group": {
+    "teen": 2709,
+    "young_adult": 2364,
+    "adult": 2105,
+    "child": 1829,
+    "unknown": 1633,
+    "senior": 302,
+    "middle_aged": 245,
+    "middle-aged": 1
+  },
+  "expression": {
+    "neutral": 3358,
+    "happy": 2741,
+    "other": 1634,
+    "surprised": 1156,
+    "angry": 1144,
+    "unknown": 690,
+    "sad": 323,
+    "fear": 134,
+    "disgust": 6,
+    "determined": 2
+  },
+  "anime_style": {
+    "cg_anime": 4998,
+    "2d_anime": 4929,
+    "chibi": 443,
+    "manga": 298,
+    "unknown": 273,
+    "sketch": 139,
+    "other": 108
+  }
+}

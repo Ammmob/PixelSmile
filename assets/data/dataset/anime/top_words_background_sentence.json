@@ -1,0 +1,802 @@
+[
+  {
+    "word": "blue",
+    "count": 2740
+  },
+  {
+    "word": "sky",
+    "count": 2394
+  },
+  {
+    "word": "white",
+    "count": 2072
+  },
+  {
+    "word": "behind",
+    "count": 1951
+  },
+  {
+    "word": "green",
+    "count": 1719
+  },
+  {
+    "word": "blurred",
+    "count": 1633
+  },
+  {
+    "word": "glowing",
+    "count": 1069
+  },
+  {
+    "word": "lit",
+    "count": 1024
+  },
+  {
+    "word": "lighting",
+    "count": 991
+  },
+  {
+    "word": "indoor",
+    "count": 967
+  },
+  {
+    "word": "outdoor",
+    "count": 935
+  },
+  {
+    "word": "wooden",
+    "count": 920
+  },
+  {
+    "word": "red",
+    "count": 901
+  },
+  {
+    "word": "clouds",
+    "count": 855
+  },
+  {
+    "word": "dimly",
+    "count": 808
+  },
+  {
+    "word": "him",
+    "count": 774
+  },
+  {
+    "word": "trees",
+    "count": 722
+  },
+  {
+    "word": "tones",
+    "count": 719
+  },
+  {
+    "word": "warm",
+    "count": 703
+  },
+  {
+    "word": "details",
+    "count": 641
+  },
+  {
+    "word": "purple",
+    "count": 626
+  },
+  {
+    "word": "pink",
+    "count": 594
+  },
+  {
+    "word": "environment",
+    "count": 590
+  },
+  {
+    "word": "text",
+    "count": 589
+  },
+  {
+    "word": "faint",
+    "count": 583
+  },
+  {
+    "word": "floating",
+    "count": 558
+  },
+  {
+    "word": "scattered",
+    "count": 556
+  },
+  {
+    "word": "wall",
+    "count": 554
+  },
+  {
+    "word": "characters",
+    "count": 551
+  },
+  {
+    "word": "gray",
+    "count": 547
+  },
+  {
+    "word": "scenery",
+    "count": 540
+  },
+  {
+    "word": "distant",
+    "count": 532
+  },
+  {
+    "word": "orange",
+    "count": 532
+  },
+  {
+    "word": "yellow",
+    "count": 516
+  },
+  {
+    "word": "solid",
+    "count": 478
+  },
+  {
+    "word": "foliage",
+    "count": 473
+  },
+  {
+    "word": "softly",
+    "count": 469
+  },
+  {
+    "word": "above",
+    "count": 459
+  },
+  {
+    "word": "backdrop",
+    "count": 445
+  },
+  {
+    "word": "stone",
+    "count": 417
+  },
+  {
+    "word": "against",
+    "count": 416
+  },
+  {
+    "word": "atmosphere",
+    "count": 408
+  },
+  {
+    "word": "forest",
+    "count": 408
+  },
+  {
+    "word": "figure",
+    "count": 403
+  },
+  {
+    "word": "gradient",
+    "count": 401
+  },
+  {
+    "word": "stylized",
+    "count": 394
+  },
+  {
+    "word": "structures",
+    "count": 374
+  },
+  {
+    "word": "golden",
+    "count": 373
+  },
+  {
+    "word": "interior",
+    "count": 369
+  },
+  {
+    "word": "emphasizing",
+    "count": 364
+  },
+  {
+    "word": "night",
+    "count": 364
+  },
+  {
+    "word": "walls",
+    "count": 359
+  },
+  {
+    "word": "lush",
+    "count": 352
+  },
+  {
+    "word": "elements",
+    "count": 349
+  },
+  {
+    "word": "black",
+    "count": 343
+  },
+  {
+    "word": "room",
+    "count": 323
+  },
+  {
+    "word": "swirling",
+    "count": 320
+  },
+  {
+    "word": "shapes",
+    "count": 317
+  },
+  {
+    "word": "buildings",
+    "count": 312
+  },
+  {
+    "word": "ambient",
+    "count": 308
+  },
+  {
+    "word": "nighttime",
+    "count": 302
+  },
+  {
+    "word": "colorful",
+    "count": 295
+  },
+  {
+    "word": "patterns",
+    "count": 294
+  },
+  {
+    "word": "other",
+    "count": 291
+  },
+  {
+    "word": "surface",
+    "count": 288
+  },
+  {
+    "word": "figures",
+    "count": 287
+  },
+  {
+    "word": "space",
+    "count": 283
+  },
+  {
+    "word": "abstract",
+    "count": 278
+  },
+  {
+    "word": "water",
+    "count": 277
+  },
+  {
+    "word": "vertical",
+    "count": 272
+  },
+  {
+    "word": "lights",
+    "count": 261
+  },
+  {
+    "word": "nearby",
+    "count": 260
+  },
+  {
+    "word": "clear",
+    "count": 259
+  },
+  {
+    "word": "natural",
+    "count": 258
+  },
+  {
+    "word": "rocky",
+    "count": 258
+  },
+  {
+    "word": "chinese",
+    "count": 256
+  },
+  {
+    "word": "additional",
+    "count": 255
+  },
+  {
+    "word": "tall",
+    "count": 253
+  },
+  {
+    "word": "surround",
+    "count": 253
+  },
+  {
+    "word": "hills",
+    "count": 249
+  },
+  {
+    "word": "ornate",
+    "count": 245
+  },
+  {
+    "word": "focusing",
+    "count": 244
+  },
+  {
+    "word": "grass",
+    "count": 244
+  },
+  {
+    "word": "dim",
+    "count": 244
+  },
+  {
+    "word": "misty",
+    "count": 243
+  },
+  {
+    "word": "completely",
+    "count": 243
+  },
+  {
+    "word": "window",
+    "count": 237
+  },
+  {
+    "word": "cloudy",
+    "count": 233
+  },
+  {
+    "word": "particles",
+    "count": 230
+  },
+  {
+    "word": "dramatic",
+    "count": 230
+  },
+  {
+    "word": "landscape",
+    "count": 227
+  },
+  {
+    "word": "lines",
+    "count": 224
+  },
+  {
+    "word": "set",
+    "count": 223
+  },
+  {
+    "word": "attention",
+    "count": 222
+  },
+  {
+    "word": "sunlight",
+    "count": 221
+  },
+  {
+    "word": "below",
+    "count": 220
+  },
+  {
+    "word": "surrounding",
+    "count": 219
+  },
+  {
+    "word": "panels",
+    "count": 218
+  },
+  {
+    "word": "mountains",
+    "count": 218
+  },
+  {
+    "word": "left",
+    "count": 217
+  },
+  {
+    "word": "urban",
+    "count": 216
+  },
+  {
+    "word": "decorative",
+    "count": 214
+  },
+  {
+    "word": "surrounds",
+    "count": 212
+  },
+  {
+    "word": "magical",
+    "count": 210
+  },
+  {
+    "word": "beige",
+    "count": 207
+  },
+  {
+    "word": "flowers",
+    "count": 204
+  },
+  {
+    "word": "right",
+    "count": 202
+  },
+  {
+    "word": "starry",
+    "count": 199
+  },
+  {
+    "word": "without",
+    "count": 197
+  },
+  {
+    "word": "muted",
+    "count": 189
+  },
+  {
+    "word": "sunset",
+    "count": 189
+  },
+  {
+    "word": "hues",
+    "count": 189
+  },
+  {
+    "word": "traditional",
+    "count": 188
+  },
+  {
+    "word": "windows",
+    "count": 186
+  },
+  {
+    "word": "circular",
+    "count": 185
+  },
+  {
+    "word": "filled",
+    "count": 185
+  },
+  {
+    "word": "pale",
+    "count": 185
+  },
+  {
+    "word": "brown",
+    "count": 183
+  },
+  {
+    "word": "context",
+    "count": 182
+  },
+  {
+    "word": "tree",
+    "count": 182
+  },
+  {
+    "word": "motion",
+    "count": 181
+  },
+  {
+    "word": "leaves",
+    "count": 179
+  },
+  {
+    "word": "vibrant",
+    "count": 178
+  },
+  {
+    "word": "ground",
+    "count": 175
+  },
+  {
+    "word": "architectural",
+    "count": 175
+  },
+  {
+    "word": "frame",
+    "count": 170
+  },
+  {
+    "word": "streaks",
+    "count": 170
+  },
+  {
+    "word": "form",
+    "count": 170
+  },
+  {
+    "word": "stars",
+    "count": 170
+  },
+  {
+    "word": "structure",
+    "count": 169
+  },
+  {
+    "word": "energy",
+    "count": 169
+  },
+  {
+    "word": "featuring",
+    "count": 167
+  },
+  {
+    "word": "floor",
+    "count": 163
+  },
+  {
+    "word": "industrial",
+    "count": 161
+  },
+  {
+    "word": "japanese",
+    "count": 159
+  },
+  {
+    "word": "beneath",
+    "count": 158
+  },
+  {
+    "word": "framed",
+    "count": 155
+  },
+  {
+    "word": "deep",
+    "count": 154
+  },
+  {
+    "word": "daylight",
+    "count": 152
+  },
+  {
+    "word": "shadows",
+    "count": 150
+  },
+  {
+    "word": "side",
+    "count": 148
+  },
+  {
+    "word": "any",
+    "count": 144
+  },
+  {
+    "word": "face",
+    "count": 139
+  },
+  {
+    "word": "filtering",
+    "count": 138
+  },
+  {
+    "word": "them",
+    "count": 138
+  },
+  {
+    "word": "mystical",
+    "count": 136
+  },
+  {
+    "word": "terrain",
+    "count": 136
+  },
+  {
+    "word": "teal",
+    "count": 135
+  },
+  {
+    "word": "isolating",
+    "count": 133
+  },
+  {
+    "word": "twilight",
+    "count": 133
+  },
+  {
+    "word": "metal",
+    "count": 132
+  },
+  {
+    "word": "shelves",
+    "count": 131
+  },
+  {
+    "word": "metallic",
+    "count": 131
+  },
+  {
+    "word": "warm-toned",
+    "count": 130
+  },
+  {
+    "word": "moon",
+    "count": 130
+  },
+  {
+    "word": "fills",
+    "count": 128
+  },
+  {
+    "word": "hanging",
+    "count": 128
+  },
+  {
+    "word": "effects",
+    "count": 126
+  },
+  {
+    "word": "petals",
+    "count": 126
+  },
+  {
+    "word": "minimal",
+    "count": 124
+  },
+  {
+    "word": "building",
+    "count": 124
+  },
+  {
+    "word": "fill",
+    "count": 124
+  },
+  {
+    "word": "distance",
+    "count": 123
+  },
+  {
+    "word": "possibly",
+    "count": 120
+  },
+  {
+    "word": "underwater",
+    "count": 120
+  },
+  {
+    "word": "distinct",
+    "count": 119
+  },
+  {
+    "word": "fiery",
+    "count": 119
+  },
+  {
+    "word": "showing",
+    "count": 118
+  },
+  {
+    "word": "two",
+    "count": 118
+  },
+  {
+    "word": "shadowy",
+    "count": 118
+  },
+  {
+    "word": "open",
+    "count": 118
+  },
+  {
+    "word": "fluffy",
+    "count": 118
+  },
+  {
+    "word": "flying",
+    "count": 118
+  },
+  {
+    "word": "entirely",
+    "count": 116
+  },
+  {
+    "word": "ocean",
+    "count": 116
+  },
+  {
+    "word": "city",
+    "count": 116
+  },
+  {
+    "word": "surrounded",
+    "count": 115
+  },
+  {
+    "word": "field",
+    "count": 115
+  },
+  {
+    "word": "geometric",
+    "count": 114
+  },
+  {
+    "word": "including",
+    "count": 112
+  },
+  {
+    "word": "branches",
+    "count": 112
+  },
+  {
+    "word": "color",
+    "count": 112
+  },
+  {
+    "word": "sunlit",
+    "count": 108
+  },
+  {
+    "word": "glows",
+    "count": 107
+  },
+  {
+    "word": "outdoors",
+    "count": 106
+  },
+  {
+    "word": "beside",
+    "count": 104
+  },
+  {
+    "word": "street",
+    "count": 104
+  },
+  {
+    "word": "greenery",
+    "count": 103
+  },
+  {
+    "word": "top",
+    "count": 102
+  },
+  {
+    "word": "sparkles",
+    "count": 102
+  },
+  {
+    "word": "furniture",
+    "count": 101
+  },
+  {
+    "word": "curtains",
+    "count": 101
+  },
+  {
+    "word": "calm",
+    "count": 101
+  },
+  {
+    "word": "architecture",
+    "count": 100
+  },
+  {
+    "word": "cityscape",
+    "count": 99
+  },
+  {
+    "word": "dense",
+    "count": 99
+  },
+  {
+    "word": "rustic",
+    "count": 98
+  },
+  {
+    "word": "plants",
+    "count": 97
+  },
+  {
+    "word": "dynamic",
+    "count": 97
+  },
+  {
+    "word": "beams",
+    "count": 96
+  }
+]

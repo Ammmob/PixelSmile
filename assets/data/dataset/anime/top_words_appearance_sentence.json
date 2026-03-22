@@ -1,0 +1,802 @@
+[
+  {
+    "word": "wears",
+    "count": 9512
+  },
+  {
+    "word": "white",
+    "count": 4656
+  },
+  {
+    "word": "hair",
+    "count": 4110
+  },
+  {
+    "word": "red",
+    "count": 4004
+  },
+  {
+    "word": "blue",
+    "count": 3430
+  },
+  {
+    "word": "black",
+    "count": 3314
+  },
+  {
+    "word": "green",
+    "count": 1821
+  },
+  {
+    "word": "shirt",
+    "count": 1809
+  },
+  {
+    "word": "brown",
+    "count": 1721
+  },
+  {
+    "word": "long",
+    "count": 1534
+  },
+  {
+    "word": "yellow",
+    "count": 1467
+  },
+  {
+    "word": "top",
+    "count": 1385
+  },
+  {
+    "word": "trim",
+    "count": 1274
+  },
+  {
+    "word": "accessories",
+    "count": 1202
+  },
+  {
+    "word": "gold",
+    "count": 1103
+  },
+  {
+    "word": "eyes",
+    "count": 1045
+  },
+  {
+    "word": "clothing",
+    "count": 1038
+  },
+  {
+    "word": "pink",
+    "count": 1036
+  },
+  {
+    "word": "robe",
+    "count": 977
+  },
+  {
+    "word": "collar",
+    "count": 934
+  },
+  {
+    "word": "purple",
+    "count": 932
+  },
+  {
+    "word": "orange",
+    "count": 798
+  },
+  {
+    "word": "fur",
+    "count": 784
+  },
+  {
+    "word": "dress",
+    "count": 766
+  },
+  {
+    "word": "jacket",
+    "count": 706
+  },
+  {
+    "word": "hat",
+    "count": 706
+  },
+  {
+    "word": "pants",
+    "count": 693
+  },
+  {
+    "word": "flowing",
+    "count": 668
+  },
+  {
+    "word": "gray",
+    "count": 651
+  },
+  {
+    "word": "short",
+    "count": 643
+  },
+  {
+    "word": "outfit",
+    "count": 615
+  },
+  {
+    "word": "tied",
+    "count": 544
+  },
+  {
+    "word": "bow",
+    "count": 539
+  },
+  {
+    "word": "tie",
+    "count": 528
+  },
+  {
+    "word": "accents",
+    "count": 504
+  },
+  {
+    "word": "golden",
+    "count": 503
+  },
+  {
+    "word": "gloves",
+    "count": 495
+  },
+  {
+    "word": "boots",
+    "count": 494
+  },
+  {
+    "word": "glowing",
+    "count": 494
+  },
+  {
+    "word": "spiky",
+    "count": 460
+  },
+  {
+    "word": "patterns",
+    "count": 458
+  },
+  {
+    "word": "vest",
+    "count": 455
+  },
+  {
+    "word": "ears",
+    "count": 451
+  },
+  {
+    "word": "suit",
+    "count": 434
+  },
+  {
+    "word": "armor",
+    "count": 407
+  },
+  {
+    "word": "sleeveless",
+    "count": 407
+  },
+  {
+    "word": "head",
+    "count": 400
+  },
+  {
+    "word": "necklace",
+    "count": 400
+  },
+  {
+    "word": "ornate",
+    "count": 397
+  },
+  {
+    "word": "coat",
+    "count": 393
+  },
+  {
+    "word": "garment",
+    "count": 389
+  },
+  {
+    "word": "collared",
+    "count": 375
+  },
+  {
+    "word": "body",
+    "count": 375
+  },
+  {
+    "word": "girl",
+    "count": 368
+  },
+  {
+    "word": "sleeves",
+    "count": 365
+  },
+  {
+    "word": "striped",
+    "count": 362
+  },
+  {
+    "word": "uniform",
+    "count": 358
+  },
+  {
+    "word": "scarf",
+    "count": 352
+  },
+  {
+    "word": "belt",
+    "count": 350
+  },
+  {
+    "word": "back",
+    "count": 350
+  },
+  {
+    "word": "glasses",
+    "count": 345
+  },
+  {
+    "word": "sash",
+    "count": 343
+  },
+  {
+    "word": "carries",
+    "count": 337
+  },
+  {
+    "word": "featuring",
+    "count": 336
+  },
+  {
+    "word": "headband",
+    "count": 320
+  },
+  {
+    "word": "sword",
+    "count": 306
+  },
+  {
+    "word": "layered",
+    "count": 306
+  },
+  {
+    "word": "standing",
+    "count": 303
+  },
+  {
+    "word": "high",
+    "count": 301
+  },
+  {
+    "word": "shoes",
+    "count": 299
+  },
+  {
+    "word": "shorts",
+    "count": 298
+  },
+  {
+    "word": "blonde",
+    "count": 297
+  },
+  {
+    "word": "skirt",
+    "count": 295
+  },
+  {
+    "word": "earrings",
+    "count": 275
+  },
+  {
+    "word": "cape",
+    "count": 270
+  },
+  {
+    "word": "hooded",
+    "count": 270
+  },
+  {
+    "word": "figure",
+    "count": 264
+  },
+  {
+    "word": "round",
+    "count": 264
+  },
+  {
+    "word": "high-collared",
+    "count": 248
+  },
+  {
+    "word": "silver",
+    "count": 238
+  },
+  {
+    "word": "emblem",
+    "count": 235
+  },
+  {
+    "word": "facial",
+    "count": 233
+  },
+  {
+    "word": "teal",
+    "count": 224
+  },
+  {
+    "word": "tunic",
+    "count": 222
+  },
+  {
+    "word": "boy",
+    "count": 222
+  },
+  {
+    "word": "decorative",
+    "count": 219
+  },
+  {
+    "word": "patterned",
+    "count": 217
+  },
+  {
+    "word": "gown",
+    "count": 214
+  },
+  {
+    "word": "skin",
+    "count": 210
+  },
+  {
+    "word": "ribbon",
+    "count": 208
+  },
+  {
+    "word": "floral",
+    "count": 203
+  },
+  {
+    "word": "matching",
+    "count": 199
+  },
+  {
+    "word": "armored",
+    "count": 196
+  },
+  {
+    "word": "robes",
+    "count": 193
+  },
+  {
+    "word": "pointed",
+    "count": 192
+  },
+  {
+    "word": "helmet",
+    "count": 191
+  },
+  {
+    "word": "markings",
+    "count": 189
+  },
+  {
+    "word": "simple",
+    "count": 187
+  },
+  {
+    "word": "mask",
+    "count": 183
+  },
+  {
+    "word": "accessory",
+    "count": 182
+  },
+  {
+    "word": "school",
+    "count": 181
+  },
+  {
+    "word": "details",
+    "count": 180
+  },
+  {
+    "word": "traditional",
+    "count": 180
+  },
+  {
+    "word": "metallic",
+    "count": 178
+  },
+  {
+    "word": "hand",
+    "count": 177
+  },
+  {
+    "word": "straps",
+    "count": 176
+  },
+  {
+    "word": "arm",
+    "count": 176
+  },
+  {
+    "word": "eye",
+    "count": 173
+  },
+  {
+    "word": "pendant",
+    "count": 173
+  },
+  {
+    "word": "headpiece",
+    "count": 169
+  },
+  {
+    "word": "buttons",
+    "count": 165
+  },
+  {
+    "word": "colorful",
+    "count": 158
+  },
+  {
+    "word": "features",
+    "count": 158
+  },
+  {
+    "word": "hands",
+    "count": 156
+  },
+  {
+    "word": "cloak",
+    "count": 155
+  },
+  {
+    "word": "covering",
+    "count": 155
+  },
+  {
+    "word": "cap",
+    "count": 154
+  },
+  {
+    "word": "ribbons",
+    "count": 153
+  },
+  {
+    "word": "short-sleeved",
+    "count": 151
+  },
+  {
+    "word": "nose",
+    "count": 150
+  },
+  {
+    "word": "beard",
+    "count": 149
+  },
+  {
+    "word": "beige",
+    "count": 148
+  },
+  {
+    "word": "stripes",
+    "count": 145
+  },
+  {
+    "word": "object",
+    "count": 136
+  },
+  {
+    "word": "wide-brimmed",
+    "count": 135
+  },
+  {
+    "word": "behind",
+    "count": 131
+  },
+  {
+    "word": "hoodie",
+    "count": 131
+  },
+  {
+    "word": "loose",
+    "count": 131
+  },
+  {
+    "word": "ruffled",
+    "count": 128
+  },
+  {
+    "word": "staff",
+    "count": 127
+  },
+  {
+    "word": "two",
+    "count": 127
+  },
+  {
+    "word": "topknot",
+    "count": 124
+  },
+  {
+    "word": "crown",
+    "count": 123
+  },
+  {
+    "word": "inner",
+    "count": 123
+  },
+  {
+    "word": "fluffy",
+    "count": 123
+  },
+  {
+    "word": "socks",
+    "count": 121
+  },
+  {
+    "word": "circular",
+    "count": 121
+  },
+  {
+    "word": "wooden",
+    "count": 121
+  },
+  {
+    "word": "male",
+    "count": 119
+  },
+  {
+    "word": "adorned",
+    "count": 116
+  },
+  {
+    "word": "curly",
+    "count": 116
+  },
+  {
+    "word": "thigh-high",
+    "count": 115
+  },
+  {
+    "word": "dog",
+    "count": 115
+  },
+  {
+    "word": "cat",
+    "count": 115
+  },
+  {
+    "word": "bodysuit",
+    "count": 114
+  },
+  {
+    "word": "beside",
+    "count": 113
+  },
+  {
+    "word": "forehead",
+    "count": 113
+  },
+  {
+    "word": "teeth",
+    "count": 112
+  },
+  {
+    "word": "flower",
+    "count": 111
+  },
+  {
+    "word": "horns",
+    "count": 110
+  },
+  {
+    "word": "expressive",
+    "count": 110
+  },
+  {
+    "word": "goggles",
+    "count": 110
+  },
+  {
+    "word": "tail",
+    "count": 110
+  },
+  {
+    "word": "long-sleeve",
+    "count": 109
+  },
+  {
+    "word": "tall",
+    "count": 109
+  },
+  {
+    "word": "sweater",
+    "count": 106
+  },
+  {
+    "word": "ponytail",
+    "count": 105
+  },
+  {
+    "word": "blouse",
+    "count": 104
+  },
+  {
+    "word": "puffed",
+    "count": 104
+  },
+  {
+    "word": "against",
+    "count": 103
+  },
+  {
+    "word": "waist",
+    "count": 103
+  },
+  {
+    "word": "gem",
+    "count": 102
+  },
+  {
+    "word": "ear",
+    "count": 101
+  },
+  {
+    "word": "plus",
+    "count": 101
+  },
+  {
+    "word": "feet",
+    "count": 100
+  },
+  {
+    "word": "embroidery",
+    "count": 99
+  },
+  {
+    "word": "wide",
+    "count": 99
+  },
+  {
+    "word": "side",
+    "count": 98
+  },
+  {
+    "word": "arms",
+    "count": 98
+  },
+  {
+    "word": "intricate",
+    "count": 98
+  },
+  {
+    "word": "braided",
+    "count": 97
+  },
+  {
+    "word": "image",
+    "count": 96
+  },
+  {
+    "word": "backpack",
+    "count": 95
+  },
+  {
+    "word": "guards",
+    "count": 95
+  },
+  {
+    "word": "only",
+    "count": 94
+  },
+  {
+    "word": "sailor-style",
+    "count": 93
+  },
+  {
+    "word": "atop",
+    "count": 92
+  },
+  {
+    "word": "stands",
+    "count": 92
+  },
+  {
+    "word": "partially",
+    "count": 92
+  },
+  {
+    "word": "lace",
+    "count": 92
+  },
+  {
+    "word": "earring",
+    "count": 91
+  },
+  {
+    "word": "dangling",
+    "count": 90
+  },
+  {
+    "word": "formal",
+    "count": 90
+  },
+  {
+    "word": "characters",
+    "count": 89
+  },
+  {
+    "word": "jersey",
+    "count": 89
+  },
+  {
+    "word": "neatly",
+    "count": 89
+  },
+  {
+    "word": "neckline",
+    "count": 89
+  },
+  {
+    "word": "long-sleeved",
+    "count": 88
+  },
+  {
+    "word": "mouth",
+    "count": 88
+  },
+  {
+    "word": "both",
+    "count": 88
+  },
+  {
+    "word": "front",
+    "count": 87
+  },
+  {
+    "word": "creature",
+    "count": 87
+  },
+  {
+    "word": "thick",
+    "count": 87
+  },
+  {
+    "word": "choker",
+    "count": 86
+  },
+  {
+    "word": "pale",
+    "count": 85
+  },
+  {
+    "word": "reddish-brown",
+    "count": 84
+  },
+  {
+    "word": "barefoot",
+    "count": 83
+  },
+  {
+    "word": "weapon",
+    "count": 83
+  },
+  {
+    "word": "off-shoulder",
+    "count": 83
+  },
+  {
+    "word": "across",
+    "count": 82
+  }
+]
