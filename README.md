@@ -6,7 +6,7 @@ Official repository for **PixelSmile: Toward Fine-Grained Facial Expression Edit
 
 The project homepage is available at:
 
-`https://ammmob.github.io/PixelSmile/`
+[https://ammmob.github.io/PixelSmile/](https://ammmob.github.io/PixelSmile/)
 
 ## Status
 
