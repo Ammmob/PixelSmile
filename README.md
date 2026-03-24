@@ -1,5 +1,5 @@
 <!-- <div align="center"> -->
-  <h2 align="center" style="border-bottom: none;">
+  <h2 align="center">
     <img src="./assets/PixelSmile.png" alt="PixelSmile Logo" height="22" >
     PixelSmile: Toward Fine-Grained Facial Expression Editing
   </h2>
@@ -15,8 +15,7 @@
 
 
 <p align="center">
-  <img src="./assets/teaser.jpg" alt="PixelSmile Teaser" width="100%" style="vertical-align: middle; position: relative; top: 100px; margin-right: 8px;"
->
+  <img src="./assets/teaser.jpg" alt="PixelSmile Teaser" width="100%">
 </p>
 
 ## 🚀 Release Plan
@@ -25,7 +24,7 @@
 - [x] Preview Model Weights
 - [ ] FFE-Bench
 - [ ] Online Demo
-- [ ] Inference Code
+- [x] Inference Code
 - [ ] Training Code
 
 ## ⚡ Quick Start
