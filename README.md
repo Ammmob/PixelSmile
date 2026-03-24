@@ -24,12 +24,12 @@
 ## 📢 Updates
 
 - [03/25/2026] 🔥 [Inference Code](https://github.com/Ammmob/PixelSmile) is released.
-- [03/24/2026] 🔥 [Project Page](https://ammmob.github.io/PixelSmile/) and [Model Weight (preview)](https://huggingface.co/PixelSmile/PixelSmile/blob/main/PixelSmile-preview.safetensors) are released.
+- [03/24/2026] 🔥 [Project Page](https://ammmob.github.io/PixelSmile/) and [Model Weight (Preview)](https://huggingface.co/PixelSmile/PixelSmile/blob/main/PixelSmile-preview.safetensors) are released.
 
 ## 🚀 Release Plan
 
 - [x] Project Page
-- [x] Model Weight (preview)
+- [x] Model Weight (Preview)
 - [ ] FFE-Bench
 - [x] Inference Code
 - [ ] Training Code
