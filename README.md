@@ -13,6 +13,7 @@
   <a href="#" title="Coming soon"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-8b5cf6" alt="Demo"></a>
 </div>
 
+<br>
 
 <p align="center">
   <img src="./assets/teaser.jpg" alt="PixelSmile Teaser" width="100%">
