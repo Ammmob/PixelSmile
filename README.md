@@ -48,6 +48,13 @@ Quick start for PixelSmile inference.
 
 ### For Inference
 
+Clone the repository and enter the project directory:
+
+```bash
+git clone https://github.com/Ammmob/PixelSmile.git
+cd PixelSmile
+```
+
 Create and activate a clean conda environment:
 
 ```bash
@@ -97,7 +104,6 @@ PixelSmile supports two simple ways to run inference.
 ### Option 1. Edit the default arguments in the script
 
 ```bash
-cd PixelSmile
 bash scripts/run_infer.sh
 ```
 
@@ -106,7 +112,6 @@ You can edit [scripts/run_infer.sh](/data/workspace/qwen-image-edit-sft/code/scr
 ### Option 2. Pass arguments from the command line
 
 ```bash
-cd PixelSmile
 bash scripts/run_infer.sh \
   --image-path /path/to/input.jpg \
   --output-dir /path/to/output \
