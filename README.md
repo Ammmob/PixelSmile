@@ -1,6 +1,6 @@
 <!-- <div align="center"> -->
   <h2 align="center" style="border-bottom: none;">
-    <img src="./assets/PixelSmile.png" alt="PixelSmile Logo" height="30" style="vertical-align: middle; position: relative; top: 0px; margin-right: 8px;">
+    <img src="./assets/PixelSmile.png" alt="PixelSmile Logo" height="22" >
     PixelSmile: Toward Fine-Grained Facial Expression Editing
   </h2>
 <!-- </div> -->
@@ -15,7 +15,8 @@
 
 
 <p align="center">
-  <img src="./assets/teaser.jpg" alt="PixelSmile Teaser" width="100%">
+  <img src="./assets/teaser.jpg" alt="PixelSmile Teaser" width="100%" style="vertical-align: middle; position: relative; top: 2px; margin-right: 8px;"
+>
 </p>
 
 ## 🚀 Release Plan
