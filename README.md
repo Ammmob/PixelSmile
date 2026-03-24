@@ -1,6 +1,6 @@
 <!-- <div align="center"> -->
-  <h2 style="border-bottom: none;">
-    <img src="./assets/PixelSmile.png" alt="PixelSmile Logo" height="44" style="vertical-align: middle; margin-right: 8px;">
+  <h2 align="center" style="border-bottom: none;">
+    <img src="./assets/PixelSmile.png" alt="PixelSmile Logo" height="30" style="vertical-align: middle; position: relative; top: -2px; margin-right: 8px;">
     PixelSmile: Toward Fine-Grained Facial Expression Editing
   </h2>
 <!-- </div> -->
