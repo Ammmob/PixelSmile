@@ -1,9 +1,9 @@
-<div align="center">
-  <h1 style="border-bottom: none;">
+<!-- <div align="center"> -->
+  <h2 style="border-bottom: none;">
     <img src="./assets/PixelSmile.png" alt="PixelSmile Logo" height="44" style="vertical-align: middle; margin-right: 8px;">
     PixelSmile: Toward Fine-Grained Facial Expression Editing
-  </h1>
-</div>
+  </h2>
+<!-- </div> -->
 
 <div align="center">
   <a href="#" title="Coming soon"><img src="https://img.shields.io/badge/arXiv-Paper-b31b1b.svg" alt="Paper"></a> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -13,7 +13,6 @@
   <a href="#" title="Coming soon"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-8b5cf6" alt="Demo"></a>
 </div>
 
----
 
 <p align="center">
   <img src="./assets/teaser.jpg" alt="PixelSmile Teaser" width="100%">
