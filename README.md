@@ -29,6 +29,10 @@
 
 ## ⚡ Quick Start
 
+1. Install the environment in [Installation](#-installation).
+2. Download the base model and PixelSmile weights in [Model Download](#-model-download).
+3. Run inference in [Inference](#-inference).
+
 ## 🔧 Installation
 
 ### For Inference
@@ -44,6 +48,12 @@ Install the inference dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Patch the current `diffusers` installation for the Qwen image edit bug:
+
+```bash
+bash scripts/patch_qwen_diffusers.sh
 ```
 
 ### For Training
@@ -71,16 +81,37 @@ We will provide the full training asset list soon.
 
 ## 🎨 Inference
 
-Run PixelSmile on a single image with the target expression and a list of expression strengths:
+PixelSmile supports two simple ways to run inference.
+
+### Option 1. Edit the default arguments in the script
 
 ```bash
 cd PixelSmile
 bash scripts/run_infer.sh
 ```
 
-You can edit [scripts/run_infer.sh](/data/workspace/qwen-image-edit-sft/code/scripts/run_infer.sh) to set the input image, output directory, model path, LoRA path, target expression, and expression strengths.
+You can edit [scripts/run_infer.sh](/data/workspace/qwen-image-edit-sft/code/scripts/run_infer.sh) and directly modify the default values in `DEFAULT_ARGS`.
+
+### Option 2. Pass arguments from the command line
+
+```bash
+cd PixelSmile
+
+bash scripts/run_infer.sh \
+  --image-path /path/to/input.jpg \
+  --output-dir /path/to/output \
+  --model-path /path/to/Qwen-Image-Edit-2511 \
+  --lora-path /path/to/PixelSmile.safetensors \
+  --expression happy \
+  --scales 0 0.5 1.0 1.5 \
+  --seed 42
+```
+
+Command-line arguments will override the default values in the script.
 
 ## 🧠 Training
+
+Training code is coming soon.
 
 ## 📖 Citation
 

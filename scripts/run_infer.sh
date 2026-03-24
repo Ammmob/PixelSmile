@@ -1,18 +1,14 @@
 #!/usr/bin/env bash
 
-IMAGE_PATH="/path/to/input.jpg"
-OUTPUT_DIR="/path/to/output"
-MODEL_PATH="/path/to/Qwen-Image-Edit-2511"
-LORA_PATH="/path/to/PixelSmile-preview.safetensors"
-EXPRESSION="happy"
-SCALES=(0.4 0.8 1.2)
-SEED=42
+DEFAULT_ARGS=(
+  --image-path "/path/to/input.jpg"
+  --output-dir "/path/to/output"
+  --model-path "/path/to/Qwen-Image-Edit-2511"
+  --lora-path "/path/to/PixelSmile-preview.safetensors"
+  --expression "happy"
+  --scales 0 0.5 1.0 1.5
+  --data-type "human"
+  --seed 42
+)
 
-python PixelSmile/infer.py \
-  --image-path "${IMAGE_PATH}" \
-  --output-dir "${OUTPUT_DIR}" \
-  --model-path "${MODEL_PATH}" \
-  --lora-path "${LORA_PATH}" \
-  --expression "${EXPRESSION}" \
-  --scales "${SCALES[@]}" \
-  --seed "${SEED}"
+python pixelsmile/infer.py "${DEFAULT_ARGS[@]}" "$@"
