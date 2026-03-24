@@ -15,7 +15,7 @@
 
 
 <p align="center">
-  <img src="./assets/teaser.jpg" alt="PixelSmile Teaser" width="100%" style="vertical-align: middle; position: relative; top: 10px; margin-right: 8px;"
+  <img src="./assets/teaser.jpg" alt="PixelSmile Teaser" width="100%" style="vertical-align: middle; position: relative; top: 100px; margin-right: 8px;"
 >
 </p>
 
