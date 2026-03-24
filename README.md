@@ -18,14 +18,19 @@
   <img src="./assets/teaser.jpg" alt="PixelSmile Teaser" width="100%">
 </p>
 
+## 📢 Updates
+
+- [03/25/2026] 🔥 [Inference code](https://github.com/Ammmob/PixelSmile) is released.
+- [03/24/2026] 🔥 [Project Page](https://ammmob.github.io/PixelSmile/) and [Preview model weights](https://huggingface.co/PixelSmile/PixelSmile/blob/main/PixelSmile-preview.safetensors) are released.
+
 ## 🚀 Release Plan
 
 - [x] Project Page
 - [x] Preview Model Weights
 - [ ] FFE-Bench
-- [ ] Online Demo
 - [x] Inference Code
 - [ ] Training Code
+- [ ] Online Demo
 
 ## ⚡ Quick Start
 
@@ -96,7 +101,6 @@ You can edit [scripts/run_infer.sh](/data/workspace/qwen-image-edit-sft/code/scr
 
 ```bash
 cd PixelSmile
-
 bash scripts/run_infer.sh \
   --image-path /path/to/input.jpg \
   --output-dir /path/to/output \
