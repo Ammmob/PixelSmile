@@ -30,10 +30,11 @@
 
 - [x] Project Page
 - [x] Model Weight (Preview)
-- [ ] FFE-Bench
 - [x] Inference Code
-- [ ] Training Code
+- [x] Benchmark Data
 - [ ] Online Demo
+- [ ] Training Code
+- [ ] Benchmark Code
 - [ ] Model Weight (Stable)
 
 ## ⚡ Quick Start
