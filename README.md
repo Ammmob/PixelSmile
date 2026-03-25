@@ -92,6 +92,8 @@ PixelSmile uses [Qwen/Qwen-Image-Edit-2511](https://huggingface.co/Qwen/Qwen-Ima
 |-|-|-|-|
 | PixelSmile-preview | Preview | Human | [Hugging Face](https://huggingface.co/PixelSmile/PixelSmile/blob/main/PixelSmile-preview.safetensors) |
 
+A more stable version is coming soon, with improved human editing quality and support for anime expression editing.
+
 ### For Training
 
 Training requires additional pretrained weights and auxiliary models.
