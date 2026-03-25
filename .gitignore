@@ -1,2 +1,5 @@
 test/
 weights/
+
+__pycache__/
+*.pyc
