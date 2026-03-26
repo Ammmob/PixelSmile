@@ -110,7 +110,7 @@ PixelSmile supports two simple ways to run inference.
 bash scripts/run_infer.sh
 ```
 
-You can edit [scripts/run_infer.sh](/data/workspace/qwen-image-edit-sft/code/scripts/run_infer.sh) and directly modify the default values in `DEFAULT_ARGS`.
+You can edit `scripts/run_infer.sh` and directly modify the default values in `DEFAULT_ARGS`.
 
 ### Option 2. Pass arguments from the command line
 
