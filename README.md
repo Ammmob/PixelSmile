@@ -12,7 +12,7 @@
   <a href="https://ammmob.github.io/PixelSmile/"><img src="https://img.shields.io/badge/Project-Page-Green" alt="Project Page"></a> &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://huggingface.co/PixelSmile/PixelSmile"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-orange" alt="Model"></a> &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://huggingface.co/datasets/PixelSmile/FFE-Bench" title="Coming soon"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Bench-1f6feb" alt="Coming soon"></a> &nbsp;&nbsp;&nbsp;&nbsp;
-  <!-- <a href="#" title="Coming soon"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-8b5cf6" alt="Demo"></a> -->
+  <a href="https://huggingface.co/spaces/PixelSmile/PixelSmile-Demo" title="Coming soon"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-8b5cf6" alt="Demo"></a>
 </div>
 
 <br>
