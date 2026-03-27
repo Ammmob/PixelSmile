@@ -133,4 +133,13 @@ Training code is coming soon.
 
 ## 📖 Citation
 
-If you find PixelSmile useful in your research or applications, please consider citing our work. The BibTeX entry will be released soon.
+If you find PixelSmile useful in your research or applications, please consider citing our work.
+
+```bibtex
+@article{hua2026pixelsmile,
+  title={PixelSmile: Toward Fine-Grained Facial Expression Editing},
+  author={Jiabin Hua and Hengyuan Xu and Aojie Li and Wei Cheng and Gang Yu and Xingjun Ma and Yu-Gang Jiang},
+  journal={arXiv preprint arXiv:2603.25728},
+  year={2026}
+}
+```
