@@ -18,6 +18,10 @@
 <br>
 
 <p align="center">
+  <img src="./assets/pixelsmile_demo_6x2.gif" alt="PixelSmile Demo" width="100%">
+</p>
+
+<p align="center">
   <img src="./assets/teaser.jpg" alt="PixelSmile Teaser" width="100%">
 </p>
 
