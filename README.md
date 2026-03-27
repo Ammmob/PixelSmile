@@ -22,7 +22,8 @@
 </p>
 
 ## 📢 Updates
-
+- [03/27/2026] 🔥 [arXiv paper](https://arxiv.org/abs/2603.25728) is now available.
+- [03/26/2026] 🔥 [Demo](https://huggingface.co/spaces/PixelSmile/PixelSmile-Demo) is live, give it a try 🎮
 - [03/25/2026] 🔥 [Inference Code](https://github.com/Ammmob/PixelSmile) and [Benchmark Data](https://huggingface.co/datasets/PixelSmile/FFE-Bench) are released.
 - [03/24/2026] 🔥 [Project Page](https://ammmob.github.io/PixelSmile/) and [Model Weight (Preview)](https://huggingface.co/PixelSmile/PixelSmile/blob/main/PixelSmile-preview.safetensors) are released.
 
