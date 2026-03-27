@@ -33,7 +33,7 @@
 - [x] Model Weight (Preview)
 - [x] Inference Code
 - [x] Benchmark Data
-- [ ] Online Demo
+- [x] Online Demo
 - [ ] Training Code
 - [ ] Benchmark Code
 - [ ] Model Weight (Stable)
