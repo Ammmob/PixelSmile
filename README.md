@@ -74,7 +74,7 @@ Install the inference dependencies:
 pip install -r requirements.txt
 ```
 
-Patch the current `diffusers` installation for the Qwen image edit bug:
+⚠️ Important! Patch the current `diffusers` installation for the Qwen image edit bug:
 
 ```bash
 bash scripts/patch_qwen_diffusers.sh
