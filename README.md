@@ -26,6 +26,7 @@
 </p>
 
 ## 📢 Updates
+- [03/29/2026] 🔥 [ComfyUI support](https://github.com/judian17/ComfyUI-PixelSmile-Conditioning-Interpolation) (community) is available. 
 - [03/27/2026] 🔥 [arXiv paper](https://arxiv.org/abs/2603.25728) is now available.
 - [03/26/2026] 🔥 [Demo](https://huggingface.co/spaces/PixelSmile/PixelSmile-Demo) is live, give it a try 🎮
 - [03/25/2026] 🔥 [Inference Code](https://github.com/Ammmob/PixelSmile) and [Benchmark Data](https://huggingface.co/datasets/PixelSmile/FFE-Bench) are released.
@@ -41,6 +42,13 @@
 - [ ] Training Code
 - [ ] Benchmark Code
 - [ ] Model Weight (Stable)
+
+## 🧩 Community Contributions
+
+A community implementation for ComfyUI is available here:
+- [ComfyUI-PixelSmile-Conditioning-Interpolation](https://github.com/judian17/ComfyUI-PixelSmile-Conditioning-Interpolation)
+
+Thanks to [@judian17](https://github.com/judian17) for making this possible.
 
 ## ⚡ Quick Start
 
