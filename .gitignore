@@ -1,5 +1,7 @@
 test/
+exps/
 weights/
+pixelsmile/configs/config.yaml
 
 __pycache__/
 *.pyc

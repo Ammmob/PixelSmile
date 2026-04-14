@@ -33,7 +33,7 @@ SUPPORTED_EXPRESSIONS = [
 ]
 DEFAULT_WEIGHTS_DIR = Path(__file__).resolve().parent.parent / "weights"
 DEFAULT_MODEL_PATH = DEFAULT_WEIGHTS_DIR / "Qwen-Image-Edit-2511"
-DEFAULT_LORA_PATH = DEFAULT_WEIGHTS_DIR / "pixelsmile.safetensors"
+DEFAULT_LORA_PATH = DEFAULT_WEIGHTS_DIR / "PixelSmile.safetensors"
 
 
 def parse_args():

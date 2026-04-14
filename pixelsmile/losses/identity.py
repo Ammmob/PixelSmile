@@ -216,9 +216,8 @@ def estimate_norm_torch(lmk, image_size=112, mode='arcface', device=None):
     return M
 
 class DET:
-    def __init__(self):
-        arcface_detect_path = "/mnt/ws-jfs/models/InsightFace/models/scrfd_10g_bnkps.onnx"
-        self.model_det = model_zoo.get_model(arcface_detect_path,providers=['CUDAExecutionProvider', 'CPUExecutionProvider'])
+    def __init__(self, det_model_path):
+        self.model_det = model_zoo.get_model(det_model_path,providers=['CUDAExecutionProvider', 'CPUExecutionProvider'])
         self.model_det.prepare(ctx_id=0, det_thresh=0.4, input_size=(640, 640))
 
     def __call__(self, image):
@@ -342,16 +341,20 @@ def detect_face_pose(landmarks, threshold=0.78):
     else:
         return "profile"
     
-REF_CLUSTER_CENTER = "/mnt/xuhengyuan/data/2person/v5/ref/npy/"
+REF_CLUSTER_CENTER = ""
 import os
 class IDLoss:
-    def __init__(self, device='cuda', use_state_negative_pool=False):
+    def __init__(self, device='cuda', use_state_negative_pool=False, det_model_path=None, rec_model_path=None):
         self.device = device
-        self.netArc = torch.load('/mnt/ws-jfs/models/InsightFace/models/glintr100.pth', map_location=torch.device("cpu"))
+        self.netArc = torch.load(
+            rec_model_path,
+            map_location=torch.device("cpu"),
+            weights_only=False,
+        )
         self.netArc = self.netArc.to(self.device, dtype=torch.bfloat16)
         self.netArc.eval()
         self.netArc.requires_grad_(True)
-        self.netDet = DET() # an onnx model however
+        self.netDet = DET(det_model_path) # an onnx model however
         self.dtype = torch.bfloat16
 
         # Initialize the negative pool
@@ -964,6 +967,3 @@ if __name__ == "__main__":
     # calculate id loss
     id_loss = id_loss_model.compute_id_loss(pred_image, [torch.tensor(gt_embeddings, dtype=torch.float32).to(id_loss_model.device)])
     print("ID Loss:", id_loss.item())
-
-
-

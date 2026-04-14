@@ -1,0 +1,84 @@
+# Experiment
+experiment:
+  description: default training config
+  author: your_name
+  method: score_one_all
+  seed: 42
+
+# Model
+model:
+  pretrained_path: ./weights/Qwen-Image-Edit-2511
+  clip_path: ./weights/clip-vit-large-patch14
+  # For anime training, set clip_path to: ./weights/DanbooruCLIP
+  insightface_detector_path: ./weights/antelopev2/scrfd_10g_bnkps.onnx
+  insightface_recognition_path: ./weights/antelopev2/glintr100.pth
+
+# Logging
+logging:
+  checkpointing_steps: 1000
+  report_to: tensorboard  # [null, tensorboard, wandb]
+  tracker_project_name: qwen-expression
+
+# Dataset
+dataset:
+  path: /path/to/train.jsonl
+  data_type: human # [human, anime]
+  max_samples: null
+  num_workers: 8
+  resize_mode: crop # [direct, padding, crop]
+  use_score_rescale: false
+  resolution:
+    width: 512
+    height: 512
+
+# LoRA
+lora:
+  rank: 64
+  alpha: 128
+  dropout: 0
+
+  target_modules:
+    # Attention
+    - to_q
+    - to_k
+    - to_v
+    - add_q_proj
+    - add_k_proj
+    - add_v_proj
+    - to_out.0
+    - to_add_out
+
+    # Image FFN
+    - img_mlp.net.0.proj
+    - img_mlp.net.2
+
+    # Text FFN (optional)
+    - txt_mlp.net.0.proj
+    - txt_mlp.net.2
+
+# Training
+training:
+  batch_size: 4
+  gradient_accumulation_steps: 1
+  num_epochs: 100
+
+  learning_rate: 1e-4
+  lr_scheduler: cosine
+  lr_warmup_steps: 500
+  max_grad_norm: 1.0
+
+  mixed_precision: bf16
+
+  # contrast loss
+  contrast_loss_weight: 1.0
+  contrast_loss_mode: nce
+  contrast_loss_symmetric: true
+  # id loss
+  id_loss_weight: 0.1
+
+  optimizer:
+    use_8bit_adam: false
+    beta1: 0.9
+    beta2: 0.999
+    weight_decay: 0.001
+    epsilon: 1e-8

@@ -1,4 +1,5 @@
 -r requirements.txt
+accelerate>=0.27.0
 datasets>=2.16.0
 numpy>=1.24.0
 tqdm>=4.65.0
@@ -6,3 +7,6 @@ omegaconf>=2.3.0
 bitsandbytes>=0.41.0
 wandb>=0.16.0
 tensorboard>=2.14.0
+insightface
+onnx2torch
+onnxruntime-gpu

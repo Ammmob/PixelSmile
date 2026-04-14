@@ -141,4 +141,3 @@ def pre_compute_embeddings(
     
     # 确保所有计算完毕           
     accelerator.wait_for_everyone()
-    print("Precompute embeddings finished!")

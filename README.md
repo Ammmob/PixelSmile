@@ -26,6 +26,8 @@
 </p>
 
 ## 📢 Updates
+
+- [04/14/2026] 🔥 [Training code](https://github.com/Ammmob/PixelSmile) is now released.
 - [03/29/2026] 🔥 [ComfyUI support](https://github.com/judian17/ComfyUI-PixelSmile-Conditioning-Interpolation) (community) is available. 
 - [03/27/2026] 🔥 [arXiv paper](https://arxiv.org/abs/2603.25728) is now available.
 - [03/26/2026] 🔥 [Demo](https://huggingface.co/spaces/PixelSmile/PixelSmile-Demo) is live, give it a try 🎮
@@ -39,7 +41,7 @@
 - [x] Inference Code
 - [x] Benchmark Data
 - [x] Online Demo
-- [ ] Training Code
+- [x] Training Code
 - [ ] Benchmark Code
 - [ ] Model Weight (Stable)
 
@@ -98,11 +100,16 @@ pip install -r requirements-train.txt
 
 ## 🤗 Model Download
 
+We recommend downloading all models to `./weights`
+
 ### For Inference
 
-PixelSmile uses [Qwen/Qwen-Image-Edit-2511](https://huggingface.co/Qwen/Qwen-Image-Edit-2511) as the base model.
+#### Base Model
+PixelSmile uses `Qwen-Image-Edit-2511` as the base model, you can download from [Hugging Face](https://huggingface.co/Qwen/Qwen-Image-Edit-2511).
 
-| Model | Stage | Data Type | Download |
+
+#### PixelSmile
+| Model | Version | Data Type | Download |
 |-|-|-|-|
 | PixelSmile-preview | Preview | Human | [Hugging Face](https://huggingface.co/PixelSmile/PixelSmile/blob/main/PixelSmile-preview.safetensors) |
 
@@ -111,38 +118,101 @@ PixelSmile uses [Qwen/Qwen-Image-Edit-2511](https://huggingface.co/Qwen/Qwen-Ima
 ### For Training
 
 Training requires additional pretrained weights and auxiliary models.
-We will provide the full training asset list soon.
+
+#### CLIP Encoder
+
+| Model | Data Type | Download |
+|-|-|-|
+| clip-vit-large-patch14 | Human | [Hugging Face](https://huggingface.co/openai/clip-vit-large-patch14) |
+| DanbooruCLIP | Anime | [Hugging Face](https://huggingface.co/OysterQAQ/DanbooruCLIP) |
+
+#### InsightFace Model
+We use ArcFace for identity embedding during training.
+
+- Download and unzip [antelopev2.zip](https://github.com/deepinsight/insightface/releases/download/v0.7/antelopev2.zip) to your model directory (default: `./weights/antelopev2`).
+- Convert `glintr100.onnx` to `glintr100.pth` using `onnx2torch`.
+
+### 📦 One-Click Download
+
+```bash
+# Inference models: Qwen base model + PixelSmile LoRA
+bash scripts/download_infer_models.sh
+
+# Training CLIP models: clip-vit-large-patch14 (human) + DanbooruCLIP (anime)
+bash scripts/download_train_clip_models.sh
+
+# Training InsightFace models: download antelopev2 and convert glintr100.onnx -> glintr100.pth
+bash scripts/download_train_insightface.sh
+```
+
 
 ## 🎨 Inference
 
-PixelSmile supports two simple ways to run inference.
-
-### Option 1. Edit the default arguments in the script
+The command below is an example for inference, model paths use our default directory: `./weights`.
 
 ```bash
-bash scripts/run_infer.sh
-```
-
-You can edit `scripts/run_infer.sh` and directly modify the default values in `DEFAULT_ARGS`.
-
-### Option 2. Pass arguments from the command line
-
-```bash
-bash scripts/run_infer.sh \
+python pixelsmile/infer.py \
   --image-path /path/to/input.jpg \
   --output-dir /path/to/output \
-  --model-path /path/to/Qwen-Image-Edit-2511 \
-  --lora-path /path/to/PixelSmile.safetensors \
+  --model-path ./weights/Qwen-Image-Edit-2511 \
+  --lora-path ./weights/PixelSmile-preview.safetensors \
   --expression happy \
+  --data-type human \
   --scales 0 0.5 1.0 1.5 \
   --seed 42
 ```
 
-Command-line arguments will override the default values in the script.
-
 ## 🧠 Training
 
-Training code is coming soon.
+This repository includes the training entry script at `pixelsmile/train.py`.
+
+### Prepare config
+
+Use `pixelsmile/configs/example.yaml` as reference and configure your training file at `pixelsmile/configs/config.yaml`.
+
+1. Configure model paths.
+- `example.yaml` already uses our default model directory layout under `./weights/...`.
+- If your models are in the same location, keep these defaults:
+- `model.pretrained_path: ./weights/Qwen-Image-Edit-2511`
+- `model.insightface_detector_path: ./weights/antelopev2/scrfd_10g_bnkps.onnx`
+- `model.insightface_recognition_path: ./weights/antelopev2/glintr100.pth`
+
+2. Configure CLIP path by data type.
+- Human data: `model.clip_path: ./weights/clip-vit-large-patch14`
+- Anime data: `model.clip_path: ./weights/DanbooruCLIP`
+
+3. Configure dataset fields.
+- `dataset.path`
+- `dataset.data_type`
+
+### Run training
+
+Single GPU:
+
+```bash
+python pixelsmile/train.py --config pixelsmile/configs/config.yaml
+```
+
+Multi-GPU (recommended via accelerate):
+
+```bash
+accelerate launch pixelsmile/train.py --config pixelsmile/configs/config.yaml
+```
+
+Training outputs are saved under `exps/<timestamp>/ (ckpts, logs, configs)`.
+
+### Smoke Test (Recommended)
+
+Before full training, start with a tiny run by temporarily setting:
+
+- `dataset.max_samples: 8`
+- `training.num_epochs: 1`
+- `training.batch_size: 1`
+- `training.gradient_accumulation_steps: 1`
+
+If the smoke test works, switch back to your full training config.
+
+
 
 ## 📖 Citation
 
@@ -151,7 +221,7 @@ If you find PixelSmile useful in your research or applications, please consider 
 ```bibtex
 @article{hua2026pixelsmile,
   title={PixelSmile: Toward Fine-Grained Facial Expression Editing},
-  author={Jiabin Hua and Hengyuan Xu and Aojie Li and Wei Cheng and Gang Yu and Xingjun Ma and Yu-Gang Jiang},
+  author={Hua, Jiabin and Xu, Hengyuan and Li, Aojie and Cheng, Wei and Yu, Gang and Ma, Xingjun and Jiang, Yu-Gang},
   journal={arXiv preprint arXiv:2603.25728},
   year={2026}
 }
