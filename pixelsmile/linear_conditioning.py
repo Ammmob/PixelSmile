@@ -76,15 +76,12 @@ def _compute_score_one(
 ):
     device = pipeline.device
     
-    # 1. 准备文本
     target_cat = data["category"]
     score = data["scores"][target_cat]
     prompt_tgt = data["prompt"]
     prompt_neu = data["prompt_neu"]
     
-    # 2. 分开编码 (核心修改)
     with torch.no_grad():
-        # 编码 Neutral
         embed_neu, mask_neu = pipeline.encode_prompt(
             prompt=prompt_neu,
             image=image, 
@@ -93,7 +90,6 @@ def _compute_score_one(
             max_sequence_length=max_sequence_length
         )
         
-        # 编码 Target
         embed_tgt, mask_tgt = pipeline.encode_prompt(
             prompt=prompt_tgt,
             image=image,
@@ -102,23 +98,16 @@ def _compute_score_one(
             max_sequence_length=max_sequence_length
         )
     
-    # 3. 核心切分逻辑 (使用负索引)
-    # 前缀部分：取 Target 的前缀 (0 ~ -2)
     prefix = embed_tgt[:, :-7, :]  
     
-    # 后缀部分：最后 2 个 Token
     suffix_neu = embed_neu[:, -7:, :]
     suffix_tgt = embed_tgt[:, -7:, :]
     
-    # 4. 线性插值计算
-    # 公式：V_neu + s * (V_tgt - V_neu)
     delta = suffix_tgt - suffix_neu
     suffix = suffix_neu + score * delta
     
-    # 5. 拼接复原
     final_embeds = torch.cat([prefix, suffix], dim=1)
     
-    # 6. Mask 处理
     final_mask = mask_tgt
     
     return final_embeds, final_mask
@@ -131,15 +120,12 @@ def _compute_score_one_exp(
 ):
     device = pipeline.device
     
-    # 1. 准备文本
     target_cat = data["category"]
     score = data["scores"][target_cat]
     prompt_tgt = data["prompt"]
     prompt_neu = data["prompt_neu"]
     
-    # 2. 分开编码 (核心修改)
     with torch.no_grad():
-        # 编码 Neutral
         embed_neu, mask_neu = pipeline.encode_prompt(
             prompt=prompt_neu,
             image=image, 
@@ -148,7 +134,6 @@ def _compute_score_one_exp(
             max_sequence_length=max_sequence_length
         )
         
-        # 编码 Target
         embed_tgt, mask_tgt = pipeline.encode_prompt(
             prompt=prompt_tgt,
             image=image,
@@ -157,23 +142,16 @@ def _compute_score_one_exp(
             max_sequence_length=max_sequence_length
         )
     
-    # 3. 核心切分逻辑 (使用负索引)
-    # 前缀部分：取 Target 的前缀
     prefix = embed_tgt[:, :-6, :]  
     
-    # 后缀部分
     suffix_neu = embed_neu[:, -6:, :]
     suffix_tgt = embed_tgt[:, -6:, :]
     
-    # 4. 线性插值计算
-    # 公式：V_neu + s * (V_tgt - V_neu)
     delta = suffix_tgt - suffix_neu
     suffix = suffix_neu + score * delta
     
-    # 5. 拼接复原
     final_embeds = torch.cat([prefix, suffix], dim=1)
     
-    # 6. Mask 处理
     final_mask = mask_tgt
     
     return final_embeds, final_mask
@@ -186,15 +164,12 @@ def _compute_score_one_tgt(
 ):
     device = pipeline.device
     
-    # 1. 准备文本
     target_cat = data["category"]
     score = data["scores"][target_cat]
     prompt_tgt = data["prompt"]
     prompt_neu = data["prompt_neu"]
     
-    # 2. 分开编码 (核心修改)
     with torch.no_grad():
-        # 编码 Neutral
         embed_neu, mask_neu = pipeline.encode_prompt(
             prompt=prompt_neu,
             image=image, 
@@ -203,7 +178,6 @@ def _compute_score_one_tgt(
             max_sequence_length=max_sequence_length
         )
         
-        # 编码 Target
         embed_tgt, mask_tgt = pipeline.encode_prompt(
             prompt=prompt_tgt,
             image=image,
@@ -216,7 +190,6 @@ def _compute_score_one_tgt(
     exp_neu = embed_neu[:, -7, :]
     exp_tgt = embed_tgt[:, -7, :]
     
-    # 公式：V_neu + s * (V_tgt - V_neu)
     delta = exp_tgt - exp_neu
     exp = exp_neu + score * delta
     
@@ -232,15 +205,12 @@ def _compute_score_one_all(
 ):
     device = pipeline.device
     
-    # 1. 准备文本
     target_cat = data["category"]
     score = data["scores"][target_cat]
     prompt_tgt = data["prompt"]
     prompt_neu = data["prompt_neu"]
     
-    # 2. 分开编码 (核心修改)
     with torch.no_grad():
-        # 编码 Neutral
         embed_neu, mask_neu = pipeline.encode_prompt(
             prompt=prompt_neu,
             image=image, 
@@ -249,7 +219,6 @@ def _compute_score_one_all(
             max_sequence_length=max_sequence_length
         )
         
-        # 编码 Target
         embed_tgt, mask_tgt = pipeline.encode_prompt(
             prompt=prompt_tgt,
             image=image,
@@ -260,7 +229,6 @@ def _compute_score_one_all(
     
 
     
-    # 公式：V_neu + s * (V_tgt - V_neu)
     delta = embed_tgt - embed_neu
     embed_tgt = embed_neu + score * delta
     

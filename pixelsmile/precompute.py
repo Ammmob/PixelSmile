@@ -26,27 +26,24 @@ def pre_compute_embeddings(
     use_score_rescale: bool = False,
 ):
     """
-    预计算 Text Embedding 和 Image Latents 并保存到磁盘。
-    支持断点续传和多卡并行计算。
+    Pre-compute text embeddings and image latents, then save them to disk.
+    Supports resume-from-breakpoint and multi-GPU parallel computation.
     """
 
     num_samples = min(len(dataset), max_samples) if max_samples else len(dataset)
     
-    # 模拟输入以初始化模型组件，避免首次推理卡顿或报错
+    # Warm up VAE once to avoid first-step latency.
     dummy_input = torch.zeros(1, 3, 1, 64, 64).to(device=accelerator.device, dtype=vae.dtype)
     _ = vae.encode(dummy_input)
     
-    # 任务分片逻辑
     compute_list = []
     for idx in range(num_samples):
-        # 多卡环境下，只处理分配给当前进程的索引
         if idx % accelerator.num_processes != accelerator.process_index:
             continue
         
         key = f"sample_{idx}"
         embeds_path = os.path.join(save_dir, f"{key}.pt")
 
-        # 断点续传：如果文件已存在，跳过
         if os.path.exists(embeds_path):
             continue
         compute_list.append((idx, embeds_path))
@@ -60,12 +57,10 @@ def pre_compute_embeddings(
         print("Remaining tasks:", total.item())
         
     with torch.no_grad():
-        # tqdm 进度条只在每个进程本地显示
         for idx, embeds_path in tqdm(compute_list, desc=f"GPU {accelerator.process_index} Pre-computing", disable=not accelerator.is_local_main_process):
 
             item = dataset[idx]
             
-            # 缩放表情分数
             if use_score_rescale:
                 item = scale_scores(item)
             
@@ -115,13 +110,12 @@ def pre_compute_embeddings(
                 max_sequence_length=1024
             )
 
-            # 2. 编码图像 (VAE) -> Latents
             def encode_vae(img):
                 img_tensor = (torch.from_numpy(np.array(img).astype(np.float32)) / 127.5) - 1.0
                 pixel_values = img_tensor.permute(2, 0, 1).unsqueeze(0).unsqueeze(2) # [1, 3, 1, H, W]
                 return vae.encode(pixel_values.to(dtype=vae.dtype, device=accelerator.device)).latent_dist.sample()[0].cpu()
 
-            # 原子化保存：先写临时文件再重命名，防止中断导致坏文件
+            # Atomic save to prevent partial files on interruption.
             tmp_path = embeds_path + ".tmp"
             torch.save({
                 'prompt_embeds_0': prompt_embeds_0[0].cpu(),
@@ -134,10 +128,8 @@ def pre_compute_embeddings(
             }, tmp_path)
             os.replace(tmp_path, embeds_path)
             
-            # 显存清理
             if idx % 50 == 0:
                 torch.cuda.empty_cache()
                 gc.collect()
     
-    # 确保所有计算完毕           
     accelerator.wait_for_everyone()

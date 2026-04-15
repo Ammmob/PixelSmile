@@ -108,7 +108,7 @@ def build_clip_image_encoder(
 
     processor = CLIPImageProcessor.from_pretrained(model_name)
 
-    # 冻结参数（重要）
+    # Keep CLIP encoder frozen.
     vision_model.requires_grad_(False)
     vision_model.eval()
 
@@ -131,19 +131,14 @@ def extract_clip_image_features(
     images,           # [B,C,H,W]  range [-1,1]
     vision_model,
 ):
-    """
-    完全可反向传播版本
-    不使用 processor
-    """
+    """Extract normalized CLIP image features from [-1, 1] tensors."""
 
-    # ---------- 保证 float32（CLIP 不吃 bf16）
+    # CLIP vision expects float32 normalized image inputs.
     images = images.float()
 
-    # ---------- [-1,1] -> [0,1]
     images = (images + 1) * 0.5
     images = images.clamp(0, 1)
 
-    # ---------- Resize 到 224
     images = F.interpolate(
         images,
         size=224,
@@ -151,20 +146,17 @@ def extract_clip_image_features(
         align_corners=False,
     )
 
-    # ---------- Normalize
     mean = _CLIP_MEAN.to(images.device, images.dtype)
     std  = _CLIP_STD.to(images.device, images.dtype)
 
     images = (images - mean) / std
 
-    # ---------- Forward
     with torch.autocast(device_type="cuda", dtype=torch.float16):
         outputs = vision_model(pixel_values=images)
 
 
     feats = outputs.pooler_output   # [B, D]
 
-    # ---------- L2 normalize（Triplet/ID loss 必做）
     feats = F.normalize(feats, dim=-1)
 
     return feats
@@ -187,29 +179,6 @@ def calc_id_loss(id_loss_fn, pairs):
 
     return torch.mean(torch.stack(losses))
 
-# def calc_id_loss(
-#     id_loss_fn, 
-#     img_a_0: torch.Tensor, 
-#     img_b_0: torch.Tensor, 
-#     img_a_1: torch.Tensor, 
-#     img_b_1: torch.Tensor
-# ) -> torch.Tensor:
-#     """
-#     计算完全对称的身份保持损失 (Symmetric Identity Loss)
-#     """
-#     # 内部定义：单分支的 ID Loss 计算逻辑
-#     def compute_single_branch(a, b):
-#         a_proc = (a.clamp(-1, 1) + 1.0) * 127.5
-#         b_proc = (b.clamp(-1, 1) + 1.0) * 127.5
-#         return id_loss_fn.compute_id_loss_two_images(a_proc, b_proc)
-
-#     # 显式调用两次
-#     loss_0 = compute_single_branch(img_a_0, img_b_0)
-#     loss_1 = compute_single_branch(img_a_1, img_b_1)
-
-#     # 返回对称均值
-#     return (loss_0 + loss_1) / 2.0
-
 def calc_target_loss(
     model_pred_0: torch.Tensor, 
     target_latents_0: torch.Tensor, 
@@ -219,25 +188,21 @@ def calc_target_loss(
     weighting: torch.Tensor
 ) -> torch.Tensor:
     """
-    计算完全对称的基础重建损失 (Symmetric Base Reconstruction Loss)
+    Compute fully symmetric base reconstruction loss (Symmetric Base Reconstruction Loss).
     """
-    # 内部定义：单分支的 Reconstruction Loss 计算逻辑
     def compute_single_branch(model_pred, target_latents):
         target = noise - target_latents
         target = target.permute(0, 2, 1, 3, 4)
         
-        # 保持你原始的 MSE 计算逻辑与维度展平
         loss = torch.mean(
             (weighting.float() * (model_pred.float() - target.float()) ** 2).reshape(target.shape, -1),
             dim=1,
         ).mean()
         return loss
 
-    # 显式调用两次
     loss_0 = compute_single_branch(model_pred_0, target_latents_0)
     loss_1 = compute_single_branch(model_pred_1, target_latents_1)
 
-    # 返回对称均值
     return (loss_0 + loss_1) / 2.0
 
 def main(args):
@@ -343,6 +308,7 @@ def main(args):
     
     if accelerator.is_main_process:
         print(f"Pre-computing embeddings in cache dir {cache_dir}...")
+        
     pre_compute_embeddings(
         raw_dataset,
         text_encoding_pipeline,
@@ -371,7 +337,6 @@ def main(args):
         subfolder="vae"
     )
     vae.to(device=accelerator.device, dtype=weight_dtype)
-    # vae.to(dtype=weight_dtype)
     # accelerator.state.select_deepspeed_plugin("vae")
     vae.requires_grad_(False)
     vae.eval()
@@ -772,13 +737,7 @@ def main(args):
                             (gt_pixels_1, pred_pixels_1)
                         ]
                     )
-                    # id_loss_val = calc_id_loss(
-                    #     id_loss_fn,
-                    #     img_a_0 = gt_pixels_0,
-                    #     img_b_0 = pred_pixels_0,
-                    #     img_a_1 = gt_pixels_1,
-                    #     img_b_1 = pred_pixels_1
-                    # )
+
                     current_t = timesteps[0].item()
                     
                     if current_t > 600: 
@@ -787,12 +746,9 @@ def main(args):
                         epsilon = 1.0 - 1e-5 # Adjusted from 1 - 1e-5 to float
                     id_loss_val = epsilon * id_loss_val
                         
-                    # Only apply epsilon to ID loss part or mix? 
-                    # Your snippet: loss = diff_loss + epsilon * args.id_loss_weight * id_loss
                     loss = loss + id_loss_weight * id_loss_val 
                     
                 # Gather loss
-                # avg_loss = accelerator.gather(loss.repeat(config.training.batch_size)).mean()
                 avg_loss = accelerator.gather(loss.detach()).mean()
 
                 train_loss += avg_loss.item() / config.training.gradient_accumulation_steps

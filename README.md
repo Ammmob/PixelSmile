@@ -212,8 +212,6 @@ Before full training, start with a tiny run by temporarily setting:
 
 If the smoke test works, switch back to your full training config.
 
-
-
 ## 📖 Citation
 
 If you find PixelSmile useful in your research or applications, please consider citing our work.
