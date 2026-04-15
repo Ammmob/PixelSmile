@@ -1,6 +1,7 @@
-# Author: Doby-Xu
-# Source: WithAnyone/withanyone/id_loss_nofa.py
-# Integrated into PixelSmile with minimal modifications.
+# Derived from WithAnyone (https://github.com/Doby-Xu/WithAnyone)
+# Original file: withanyone/id_loss.py
+# License: MIT 
+# Modifications: Integrated into PixelSmile with minimal modifications.
 
 from insightface.model_zoo import model_zoo
 
