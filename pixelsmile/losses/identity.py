@@ -9,7 +9,6 @@ import numpy as np
 from typing import List, Tuple
 
 from PIL import Image
-# import torchvision.transforms.functional as F
 from torch.nn import functional as F
 
 
@@ -17,11 +16,6 @@ import skimage.transform as trans
 import numpy as np
 
 from scipy.optimize import linear_sum_assignment
-
-# from info_nce import InfoNCE, info_nce
-
-## Code from duonglong289: https://gist.github.com/duonglong289/79392e7062cbe8517294266ef7670703 ####################
-# DEVICE = torch.device("cuda" if torch.cuda.is_available() else 'cpu')
 arcface_src = torch.tensor(
     [[38.2946, 51.6963], 
      [73.5318, 51.5014], 
@@ -161,8 +155,6 @@ def align_face(img: torch.Tensor, landmark: torch.Tensor, image_size: int=112):
     aligned_img = img_tensor.permute((1,2,0))*255
     
     return aligned_img
-###############################################################################
-
 def estimate_norm_torch(lmk, image_size=112, mode='arcface', device=None):
     """
     PyTorch version of estimate_norm function
@@ -531,208 +523,6 @@ class IDLoss:
             
         id_loss = torch.mean(torch.stack(id_losses))
         return id_loss
-
-    # def compute_contrastive_loss(self, generated_embeddings, ground_truth_embeddings, 
-    #                           generated_labels=None, ground_truth_labels=None, 
-    #                           temperature=0.07, max_negatives=10):
-    #     """
-    #     InfoNCE for single face. Matches generated[i] with ground_truth[i].
-    #     Uses other ground truths in batch as negatives.
-    #     """
-    #     device = self.device
-    #     dtype = self.dtype
-    
-    #     gen = generated_embeddings.to(device=device, dtype=dtype)
-    #     gt = ground_truth_embeddings.to(device=device, dtype=dtype)
-        
-    #     # Flatten extra dimensions (B, 1, D) -> (B, D)
-    #     if gen.ndim > 2: gen = gen.view(gen.shape[0], -1)
-    #     if gt.ndim > 2: gt = gt.view(gt.shape[0], -1)
-
-    #     gen = F.normalize(gen, dim=1)
-    #     gt  = F.normalize(gt, dim=1)
-        
-    #     B = gen.shape[0]
-        
-    #     # Use simple symmetric cross-entropy for batch contrastive
-    #     # Similarity between each gen and all GTs
-    #     logits = torch.matmul(gen, gt.T) / temperature # [B, B]
-    #     labels = torch.arange(B, device=device) # [0, 1, ... B-1]
-        
-    #     loss = F.cross_entropy(logits, labels)
-    #     return loss
-    
-    # def compute_info_nce_loss(self, generated_embeddings, ground_truth_embeddings, extend_negative_pool=None):
-    #     device = self.device
-    #     dtype = self.dtype
-    
-    #     gen = generated_embeddings.to(device=device, dtype=dtype)
-    #     gt = ground_truth_embeddings.to(device=device, dtype=dtype)
-        
-    #     if gen.ndim > 2: gen = gen.view(gen.shape[0], -1)
-    #     if gt.ndim > 2: gt = gt.view(gt.shape[0], -1)
-        
-    #     gen = F.normalize(gen, dim=1) # [B, D]
-    #     gt  = F.normalize(gt, dim=1)  # [B, D]
-        
-    #     loss_fn = InfoNCE(negative_mode='paired')
-
-    #     query = gen
-    #     positive_keys = gt
-        
-    #     # Create negatives from batch
-    #     B = gen.shape[0]
-    #     negative_keys = []
-    #     for i in range(B):
-    #         # Use all valid GTs except i as negatives
-    #         indices = torch.arange(B, device=device) != i
-    #         neg_keys = gt[indices]
-    #         negative_keys.append(neg_keys)
-            
-    #     negative_keys = torch.stack(negative_keys, dim=0) # [B, B-1, D]
-
-    #     if extend_negative_pool is not None:
-    #         ext_neg = extend_negative_pool.to(device=device, dtype=dtype)
-    #         # Flatten if needed
-    #         if ext_neg.ndim == 4:
-    #             ext_neg = ext_neg.view(ext_neg.shape[0], -1, ext_neg.shape[-1])
-    #         negative_keys = torch.cat([negative_keys, ext_neg], dim=1)
-
-    #     return loss_fn(query, positive_keys, negative_keys)
-
-    # def region_diffusion_loss(self, decoded_images, ground_truth_image, bboxes_A, bboxes_B=None, 
-    #                                weights_A=1.0, weights_B=1.0, background_weight=-1,
-    #                                loss_type='mse', normalize_by_area=True):
-    #     '''
-    #     Optimized regional diffusion loss for face restoration
-    #     - Supports weighted loss for different regions
-    #     - Optional background loss with lower weight
-    #     - Multiple loss function options (MSE, L1, SSIM)
-    #     - Normalization by region area to avoid bias toward larger regions
-    #     '''
-    #     # 1. Get batch dimensions
-    #     b, c, h, w = decoded_images.shape
-    #     loss_list = []
-    #     background_losses = []
-
-    #     decoded_images = decoded_images.float()
-    #     ground_truth_image = ground_truth_image.float()
-        
-    #     # If weights are scalar, expand to list for each batch item
-    #     if not isinstance(weights_A, (list, tuple)):
-    #         weights_A = [weights_A] * b
-    #     if bboxes_B is not None and not isinstance(weights_B, (list, tuple)):
-    #         weights_B = [weights_B] * b
-        
-    #     # Create full image mask for background calculation
-    #     if background_weight > 0:
-    #         full_mask = torch.ones((b, 1, h, w), device=decoded_images.device)
-        
-    #     for i in range(b):
-    #         # Create region masks for current image
-    #         region_masks = []
-    #         region_weights = []
-            
-    #         # Handle A bounding box
-    #         if bboxes_A is not None:
-    #             bbox_A = bboxes_A[i]
-    #             # Ensure bbox is within image boundaries
-    #             # print("bbox_A", bbox_A)
-    #             # exit()
-    #             y1_A, x1_A = max(0, int(bbox_A[1])), max(0, int(bbox_A[0]))
-    #             y2_A, x2_A = min(h, int(bbox_A[3])), min(w, int(bbox_A[2]))
-                
-    #             if y2_A > y1_A and x2_A > x1_A:  # Valid bbox
-    #                 # Crop regions
-    #                 decoded_region_A = decoded_images[i, :, y1_A:y2_A, x1_A:x2_A]
-    #                 ground_truth_region_A = ground_truth_image[i, :, y1_A:y2_A, x1_A:x2_A]
-                    
-    #                 # Calculate loss based on specified type
-    #                 if loss_type == 'mse':
-    #                     region_loss_A = torch.nn.functional.mse_loss(decoded_region_A, ground_truth_region_A, reduction='mean')
-    #                 elif loss_type == 'l1':
-    #                     region_loss_A = torch.nn.functional.l1_loss(decoded_region_A, ground_truth_region_A, reduction='mean')
-    #                 elif loss_type == 'smooth_l1':
-    #                     region_loss_A = torch.nn.functional.smooth_l1_loss(decoded_region_A, ground_truth_region_A, reduction='mean')
-                    
-    #                 # Normalize by area if requested
-    #                 if normalize_by_area:
-    #                     area_A = (y2_A - y1_A) * (x2_A - x1_A)
-    #                     region_loss_A = region_loss_A * (h * w / area_A) if area_A > 0 else region_loss_A
-                    
-    #                 loss_list.append(weights_A[i] * region_loss_A)
-                    
-    #                 # Create mask for background calculation
-    #                 if background_weight > 0:
-    #                     mask_A = torch.zeros((1, h, w), device=decoded_images.device)
-    #                     mask_A[:, y1_A:y2_A, x1_A:x2_A] = 1
-    #                     region_masks.append(mask_A)
-            
-    #         # Handle B bounding box if provided
-    #         if bboxes_B is not None:
-    #             bbox_B = bboxes_B[i]
-    #             # Ensure bbox is within image boundaries
-    #             y1_B, x1_B = max(0, int(bbox_B[1])), max(0, int(bbox_B[0]))
-    #             y2_B, x2_B = min(h, int(bbox_B[3])), min(w, int(bbox_B[2]))
-                
-    #             if y2_B > y1_B and x2_B > x1_B:  # Valid bbox
-    #                 # Crop regions
-    #                 decoded_region_B = decoded_images[i, :, y1_B:y2_B, x1_B:x2_B]
-    #                 ground_truth_region_B = ground_truth_image[i, :, y1_B:y2_B, x1_B:x2_B]
-                    
-    #                 # Calculate loss based on specified type
-    #                 if loss_type == 'mse':
-    #                     region_loss_B = torch.nn.functional.mse_loss(decoded_region_B, ground_truth_region_B, reduction='mean')
-    #                 elif loss_type == 'l1':
-    #                     region_loss_B = torch.nn.functional.l1_loss(decoded_region_B, ground_truth_region_B, reduction='mean')
-    #                 elif loss_type == 'smooth_l1':
-    #                     region_loss_B = torch.nn.functional.smooth_l1_loss(decoded_region_B, ground_truth_region_B, reduction='mean')
-                    
-    #                 # Normalize by area if requested
-    #                 if normalize_by_area:
-    #                     area_B = (y2_B - y1_B) * (x2_B - x1_B)
-    #                     region_loss_B = region_loss_B * (h * w / area_B) if area_B > 0 else region_loss_B
-                    
-    #                 loss_list.append(weights_B[i] * region_loss_B)
-                    
-    #                 # Create mask for background calculation
-    #                 if background_weight > 0:
-    #                     mask_B = torch.zeros((1, h, w), device=decoded_images.device)
-    #                     mask_B[:, y1_B:y2_B, x1_B:x2_B] = 1
-    #                     region_masks.append(mask_B)
-            
-    #         # Calculate background loss if enabled
-    #         if background_weight > 0 and region_masks:
-    #             # Combine all region masks
-    #             combined_mask = torch.clamp(torch.sum(torch.stack(region_masks), dim=0), 0, 1)
-    #             # Invert to get background mask
-    #             background_mask = 1 - combined_mask
-                
-    #             # Apply mask to get background pixels only
-    #             decoded_bg = decoded_images[i] * background_mask
-    #             ground_truth_bg = ground_truth_image[i] * background_mask
-                
-    #             # Calculate background loss
-    #             if torch.sum(background_mask) > 0:  # Only if there are background pixels
-    #                 if loss_type == 'mse':
-    #                     bg_loss = F.mse_loss(decoded_bg, ground_truth_bg, reduction='sum') / (torch.sum(background_mask) + 1e-8)
-    #                 elif loss_type == 'l1':
-    #                     bg_loss = F.l1_loss(decoded_bg, ground_truth_bg, reduction='sum') / (torch.sum(background_mask) + 1e-8)
-    #                 elif loss_type == 'smooth_l1':
-    #                     bg_loss = F.smooth_l1_loss(decoded_bg, ground_truth_bg, reduction='sum') / (torch.sum(background_mask) + 1e-8)
-                    
-    #                 background_losses.append(background_weight * bg_loss)
-        
-    #     # Combine all losses
-
-    #     all_losses = loss_list + background_losses
-    #     if all_losses:
-    #         total_loss = torch.mean(torch.stack(all_losses))
-    #     else:
-    #         # Fallback to full image loss if no valid regions
-    #         total_loss = torch.nn.functional.mse_loss(decoded_images, ground_truth_image)
-            
-    #     return total_loss
 
     def get_arcface_embeddings_with_features(self, images, expected_num_faces=None):
         """
