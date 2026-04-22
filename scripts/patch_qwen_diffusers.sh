@@ -8,12 +8,12 @@ MATCH_LINE_OLD="if prompt_embeds_mask is not None and prompt_embeds_mask.all():"
 MATCH_LINE_NEW="if prompt_embeds_mask.all():"
 
 sed -i "
-/^[[:space:]]*if prompt_embeds_mask is not None and prompt_embeds_mask.all():[[:space:]]*$/ {
+/^[[:space:]]*$MATCH_LINE_OLD[[:space:]]*$/ {
     /^[[:space:]]*#/! s/^/# /
     n
     /^[[:space:]]*#/! s/^/# /
 }
-/^[[:space:]]*if prompt_embeds_mask.all():[[:space:]]*$/ {
+/^[[:space:]]*$MATCH_LINE_NEW[[:space:]]*$/ {
     /^[[:space:]]*#/! s/^/# /
     n
     /^[[:space:]]*#/! s/^/# /
