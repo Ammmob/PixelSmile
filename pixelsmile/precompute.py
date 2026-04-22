@@ -69,9 +69,10 @@ def pre_compute_embeddings(
             target_image_1 = Image.open(item['dst'][1]['image']).convert('RGB')
             
     
-            control_image = resize(control_image, (width, height), resize_mode, box=item['src']['boxes'])
-            target_image_0 = resize(target_image_0, (width, height), resize_mode, box=item['dst'][0]['boxes'])
-            target_image_1 = resize(target_image_1, (width, height), resize_mode, box=item['dst'][1]['boxes'])
+            # boxes are optional; pass None when missing.
+            control_image = resize(control_image, (width, height), resize_mode, box=item['src'].get('boxes'))
+            target_image_0 = resize(target_image_0, (width, height), resize_mode, box=item['dst'][0].get('boxes'))
+            target_image_1 = resize(target_image_1, (width, height), resize_mode, box=item['dst'][1].get('boxes'))
 
             if data_type == "human":
                 subject = "person"

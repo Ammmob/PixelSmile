@@ -33,7 +33,6 @@ class TripletExpressionDataset(Dataset):
     def __getitem__(self, idx):
         key = f"sample_{idx}"
         path = os.path.join(self.cache_dir, f"{key}.pt")
-
         embeds = torch.load(path, map_location="cpu", weights_only=True)
 
         return {

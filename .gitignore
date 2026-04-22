@@ -1,6 +1,8 @@
 test/
 exps/
 weights/
+output/
+outputs/
 pixelsmile/configs/config.yaml
 
 __pycache__/
